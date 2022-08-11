@@ -18,7 +18,7 @@ import { GrMysql } from "react-icons/gr";
 
 function TechCard({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <div className="w-fit md:w-40 m-4">
+    <div className="w-fit md:w-40 m-4 shadow-xl">
       <Tilt>
         <div className="bg-black text-white rounded-xl flex flex-col p-4 lg:p-8 w-full text-2xl jusify-center items-center hover:text-primary-dark group transition-all">
           <i className="md:translate-y-6 group-hover:translate-y-0 transition-all">{icon}</i>
