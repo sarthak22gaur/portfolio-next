@@ -5,6 +5,7 @@ import { SiGithub } from "react-icons/si";
 import minimal from "../Assets/minimal.png";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export function ProjectCard({
   Title,
@@ -24,39 +25,27 @@ export function ProjectCard({
   console.log(ocean);
   return (
     <div className="flex flex-col h-fit p-4 mb-8 transition-all group  ">
-      <div className="w-[400px] object-cover z-10 transition-all text-gray-600 group-hover:text-primary-dark ">
+      <div className="w-[400px] object-cover transition-all text-gray-600 group-hover:text-primary-dark ">
         <div className="object-fill aspect-square rounded-xl lg:blur-sm lg:grayscale group-hover:blur-0 group-hover:grayscale-0 transition-all">
-        {/* <
-          
-          src='/ass'
-          width='100px'
-          height='100px'
-          alt=""
-        /> */}
-
-        <Image layout="responsive"
-              width={600}
-              height={400}
-              className=""
-              src={minimal}
-              alt="Main image" />
-      
-
+          <Image
+            layout="responsive"
+            width={600}
+            height={400}
+            className=""
+            src={minimal}
+            alt="Main image"
+          />
         </div>
-        
         <h1 className="text-3xl font-bold mt-2">{Title}</h1>
       </div>
       <div className="w-[400px] flex flex-col mt-4 flex-wrap lg:scale-0 group-hover:scale-100 transition-all">
         <p className="text-xl text-justify">{Description}</p>
-        {/* {Tech && <ul className="flex flex-wrap my-4 gap-4 text-gray-500">
-          <ProjectStackItem label={Tech[0]} />
-          <ProjectStackItem label={Tech[1]} />
-          <ProjectStackItem label={Tech[2]} />
-          <ProjectStackItem label={Tech[3]} />
-        </ul>} */}
-        {Tech.map((curr, index) => {
-          return <ProjectStackItem label={curr} key={index} />
-        })}
+        <ul className="flex flex-wrap my-4 gap-4 text-gray-500">
+          {Tech.map((curr, index) => {
+            return <ProjectStackItem label={curr} key={index} />;
+          })}
+        </ul>
+
         <ul className="flex gap-4 my-4">
           <ProjectCTAItem
             icon={<FaExternalLinkAlt size="16" />}
@@ -75,7 +64,7 @@ export function ProjectCard({
 function ProjectStackItem({ label }: { label: string }) {
   return (
     <li className="pr-2">
-      <span>{label}</span>
+      {label}
     </li>
   );
 }
@@ -88,12 +77,10 @@ function ProjectCTAItem({
   icon: React.ReactNode;
 }) {
   return (
-    <li>
-      <a href={externalLink}>
-        <div className="flex gap-2 bg-primary-dark text-black p-2 rounded hover:bg-black hover:text-white transition-all">
-          <i>{icon}</i>
-        </div>
-      </a>
-    </li>
+    <Link href={externalLink}>
+      <li className="flex gap-2 cursor-pointer bg-primary-dark text-black p-2 rounded hover:bg-black hover:text-white transition-all">
+        {icon}
+      </li>
+    </Link>
   );
 }

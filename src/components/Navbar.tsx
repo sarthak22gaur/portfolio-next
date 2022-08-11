@@ -10,66 +10,74 @@ import {
 import Link from "next/link";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <div className="sticky flex z-50 items-center backdrop-blur-3xl w-full">
+        <div className="flex justify-between items-center w-full">
+          <Link href="/">
+            <span className="cursor-pointer text-primary-dark p-4 text-3xl font-bold lg:pl-12">
+              Sg.
+            </span>
+          </Link>
+          <nav className="hidden sm:flex w-fit justify-end">
+            <NavbarLinks />
+          </nav>
+        </div>
+        <MobileMenu />
+      </div>
+    </>
+  );
+}
 
+function MobileMenu() {
+  const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
-
   const closeMenu = (
     <div onClick={handleToggle}>
       <NavBarMenuIcon icon={<AiOutlineClose size="26" />} />
     </div>
   );
-
   const openMenu = (
     <div onClick={handleToggle} className="m-0 p-0">
       <NavBarMenuIcon icon={<AiOutlineMenu size="26" />} />
     </div>
   );
-
   return (
-    <div className="navbar w-full sm:my-4">
-      <div className="flex sm:grid sm:grid-flow-col justify-between items-center w-full h-full">
-        <Link
-          className="logo text-primary-dark p-4 text-3xl font-bold lg:pl-12"
-          href="/"
-        >
-          Sg.
-        </Link>
+    <>
+      <nav className="h-fit z-10 fixed top-0 sm:hidden items-center w-full">
         {isOpen ? (
-          <nav className="sm:flex h-fit fixed sm:sticky top-0 bg-black sm:justify-between items-center w-full sm:w-fit sm:h-full p-0 m-0">
+          <div className="backdrop-blur-3xl pb-2">
             {closeMenu}
             <NavbarLinks />
-          </nav>
+          </div>
         ) : (
           openMenu
-        )}
-        <nav className="sm:flex h-fit hidden fixed sm:sticky top-0 bg-black rounded-md sm:justify-between items-center w-full sm:w-fit sm:h-full p-0 m-0">
-          <NavbarLinks />
-        </nav>
-      </div>
-    </div>
+        )}{" "}
+      </nav>
+    </>
   );
 }
 
 function NavbarLinks() {
   return (
-    <ul className="flex flex-col sm:flex-row justify-between items-center w-full mb-4 sm:mb-0 sm:px-4 gap-4 active:text-primary-dark">
+    <ul className="flex flex-col sm:flex-row items-center w-full mb-4 sm:mb-0 sm:px-4 gap-4 active:text-primary-dark">
       <NavBarItem
         icon={<BsFillHouseFill size="16" />}
         label="Home"
         pagelink="/"
       />
-      <NavBarItem
-        icon={<BsFillPersonFill size="16" />}
-        label="About"
-        pagelink="/about"
-      />
+
       <NavBarItem
         icon={<AiFillProject size="16" />}
         label="Projects"
         pagelink="/projects"
+      />
+      <NavBarItem
+        icon={<BsFillPersonFill size="16" />}
+        label="About"
+        pagelink="/about"
       />
       <NavbarCTA label="Resume" pagelink="/resume" />
     </ul>
@@ -86,14 +94,12 @@ function NavBarItem({
   pagelink: string;
 }) {
   return (
-    <li>
-      <a href='#home'>
-        <div className="flex flex-row justify-center items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark">
-          <i>{icon}</i>
-          <span>{label}</span>
-        </div>
-      </a>
-    </li>
+    <Link href="#home">
+      <li className="flex flex-row justify-center cursor-pointer items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark transition-all">
+        <i>{icon}</i>
+        <span>{label}</span>
+      </li>
+    </Link>
   );
 }
 
@@ -101,7 +107,7 @@ function NavbarCTA({ label, pagelink }: { label: string; pagelink: string }) {
   return (
     <li>
       <a href={pagelink}>
-        <div className="flex flex-row justify-center items-center gap-2 m-2 px-4 py-1 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark">
+        <div className="flex flex-row justify-center items-center gap-2 m-2 px-4 py-1 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark transition-all">
           <span>{label}</span>
         </div>
       </a>
