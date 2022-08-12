@@ -63,39 +63,17 @@ function MobileMenu() {
 function NavbarLinks() {
   return (
     <ul className="flex flex-col sm:flex-row items-center w-full mb-4 sm:mb-0 sm:px-4 gap-4 active:text-primary-dark">
-      <NavBarItem
-        icon={<BsFillHouseFill size="16" />}
-        label="Home"
-        pagelink="/"
-      />
-
-      <NavBarItem
-        icon={<AiFillProject size="16" />}
-        label="Projects"
-        pagelink="/projects"
-      />
-      <NavBarItem
-        icon={<BsFillPersonFill size="16" />}
-        label="About"
-        pagelink="/about"
-      />
+      <NavBarItem icon={<BsFillPersonFill size="16" />} label="me" />
+      <NavBarItem icon={<AiFillProject size="16" />} label="work" />
       <NavbarCTA label="Resume" pagelink="/resume" />
     </ul>
   );
 }
 
-function NavBarItem({
-  icon,
-  label,
-  pagelink,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  pagelink: string;
-}) {
+function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <Link href="#home">
-      <li className="flex flex-row justify-center cursor-pointer items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark transition-all">
+      <li className="flex flex-row  text-sm justify-center cursor-pointer items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark transition-all">
         <i>{icon}</i>
         <span>{label}</span>
       </li>
@@ -107,7 +85,7 @@ function NavbarCTA({ label, pagelink }: { label: string; pagelink: string }) {
   return (
     <li>
       <a href={pagelink}>
-        <div className="flex flex-row justify-center items-center gap-2 m-2 px-4 py-1 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark transition-all">
+        <div className="flex flex-row justify-center items-center text-sm gap-2 m-2 px-4 py-2 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark transition-all">
           <span>{label}</span>
         </div>
       </a>
