@@ -2,7 +2,6 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
-import Link from "next/link";
 
 export function ProjectCard({
   Title,
@@ -21,7 +20,6 @@ export function ProjectCard({
   Livelink: string;
   Repolink: string;
 }) {
-
   // let mql = window.matchMedia('(max-width: 600px)');
   return (
     <Tilt tiltMaxAngleX={1} tiltMaxAngleY={1}>
@@ -78,10 +76,10 @@ function ProjectCTAItem({
   icon: React.ReactNode;
 }) {
   return (
-    <Link href={externalLink}>
+    <a target="_blank" rel="noopener noreferrer" href={externalLink}>
       <li className="flex gap-2 cursor-pointer text-white  bg-black p-2 rounded hover:bg-black hover:text-primary-dark hover:-translate-y-1 transition-all">
         {icon}
       </li>
-    </Link>
+    </a>
   );
 }

@@ -10,7 +10,10 @@ import TechStack from "@/components/TechStack";
 const About: NextPage = () => {
   return (
     <>
-      <main id="me" className="flex flex-col w-full items-center p-2 sm:p-8 min-h-screen">
+      <main
+        id="me"
+        className="flex flex-col w-full items-center p-2 sm:p-8 min-h-screen"
+      >
         <h1 className="text-3xl lg:text-4xl font-light pb-12 w-full text-center text-slate-400">
           A few things about me 😃
         </h1>
@@ -41,16 +44,23 @@ const About: NextPage = () => {
             </ul>
 
             <div className="flex gap-4 justify-center md:justify-end mt-8 text-primary-dark">
-              <Link href="/">
-                <a className="cursor-pointer text-white  bg-black p-2 rounded hover:bg-black hover:text-primary-dark hover:-translate-y-1 transition-all">
-                  <SiLinkedin size="28" />
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="cursor-pointer text-white  bg-black p-2 rounded hover:bg-black hover:text-primary-dark hover:-translate-y-1 transition-all">
-                  <SiGithub size="28" />
-                </a>
-              </Link>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/sarthak-gaur-22041998/"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-white  bg-black p-2 rounded hover:bg-black hover:text-primary-dark hover:-translate-y-1 transition-all"
+              >
+                <SiLinkedin size="28" />
+              </a>
+
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/sarthak22gaur"
+                className="cursor-pointer text-white  bg-black p-2 rounded hover:bg-black hover:text-primary-dark hover:-translate-y-1 transition-all"
+              >
+                <SiGithub size="28" />
+              </a>
             </div>
           </div>
         </section>
