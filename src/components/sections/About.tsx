@@ -19,7 +19,7 @@ const About: NextPage = () => {
             <Image src={soccer} alt="" />
           </div>
           <div className="md:w-1/2 text-center md:text-right">
-            <h1 id="home" className="font-light text-3xl mt-8 lg:text-4xl">
+            <h1 id="home" className="font-light text-xl mt-8 lg:text-3xl">
               I&apos;m pursuing
               <span className="leading-relaxed font-bold text-primary-dark">
                 {" "}
@@ -31,23 +31,23 @@ const About: NextPage = () => {
                 University of Texas at Dallas
               </span>
             </h1>
-            <p className="text-xl text-gray-500 italic mt-12">
+            <p className="text-base text-gray-500 italic pt-12">
               When I&apos;m not building stuff for the web or trying out new
               tech, I indulge myself in one of these 👇🏻
             </p>
-            <ul className="my-4 text-xl text-gray-500">
+            <ul className="my-4 text-base text-gray-500">
               <li>Playing/watching soccer ⚽</li>
               <li>Reading books 📚</li>
             </ul>
 
-            <div className="flex gap-8 justify-center md:justify-end mt-8 text-primary-dark">
+            <div className="flex gap-4 justify-center md:justify-end mt-8 text-primary-dark">
               <Link href="/">
-                <a>
+                <a className="cursor-pointer text-white  bg-black p-2 rounded hover:bg-black hover:text-primary-dark hover:-translate-y-1 transition-all">
                   <SiLinkedin size="28" />
                 </a>
               </Link>
               <Link href="/">
-                <a>
+                <a className="cursor-pointer text-white  bg-black p-2 rounded hover:bg-black hover:text-primary-dark hover:-translate-y-1 transition-all">
                   <SiGithub size="28" />
                 </a>
               </Link>
