@@ -2,6 +2,10 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+import minimal from "@/assets/minimal.png";
+import weakestres from "@/assets/weakest-result.png";
+import weakestmdesk from "@/assets/weakest-desktop.png";
+
 import { ProjectCard } from "@/components/ProjectCard";
 
 import homeillustration from "@/assets/homeillustration.svg";
@@ -13,41 +17,24 @@ const Projects: NextPage = () => {
         <h1 className="border-primary-dark border-b-2 mb-8 p-4 font-bold text-3xl lg:text-4xl">
           A few things I&apos;ve built
         </h1>
-        <main className="grid auto-rows-fr min-h-[65vh] p-4 gap-24 max-w-[70vw] ">
+        <main className="grid auto-rows-fr p-4 gap-24 max-w-[70vw] ">
           <ProjectCard
-            Title="Launching Soon"
-            Description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae?"
+            Title="Byte the Tech"
+            Description="A personal blog. LAUNCHING SOON"
             Livelink="skgr.xyz"
             Repolink="github.com"
-            ImageURL=""
-            Tech={["Nodejs", "Nextjs", "Firebase", "Planetscale"]}
+            ImageURL="../assets/weakest-desktop.png"
+            Tech={["Nextjs", "tRPC", "NextAuth", "TailwindCSS", "MySQL"]}
           />
 
           <ProjectCard
-            Title="Launching Soon"
-            Description=" Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae?adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae?"
-            Livelink="skgr.xyz"
-            Repolink="github.com"
-            ImageURL=""
-            Tech={["Nodejs", "Nextjs", "Firebase", "Planetscale"]}
+            Title="Weakest Z-Fighter"
+            Description="A polling website made with the t3 stack to get familiar with tRPC and tailwind and to finally find out who is the weakest among all the Z-fighters. The data was scraped from MyAnimeList using a Go web scraper"
+            Livelink="https://weakest.skgr.xyz/"
+            Repolink="https://github.com/sarthak22gaur/weakest-z"
+            ImageURL='../assets/weakest-desktop.png'
+            Tech={["tRPC", "Nextjs", "TailwindCSS", "MySQL"]}
           />
-          <ProjectCard
-            Title="Launching Soon"
-            Description=" Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae?adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae?"
-            Livelink="skgr.xyz"
-            Repolink="github.com"
-            ImageURL=""
-            Tech={["Nodejs", "Nextjs", "Firebase", "Planetscale"]}
-          />
-
-          {/* <ProjectCard
-              Title="Launching Soon"
-              Description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae?Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae? Pariatur perspiciatis a harum voluptas soluta autem cumque alias quasi vitae?"
-              Livelink="/"
-              Repolink="/"
-              ImageURL=""
-              Tech={["Nodejs", "Nextjs", "Firebase", "Planetscale"]}
-            /> */}
         </main>
       </article>
     </>
