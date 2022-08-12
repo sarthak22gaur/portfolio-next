@@ -3,23 +3,23 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { SiLinkedin, SiGithub } from "react-icons/si";
-import soccer from "@/assets/soccer.svg";
+import soccer from "@/assets/soccer2.svg";
 
 import TechStack from "@/components/TechStack";
 
 const About: NextPage = () => {
   return (
     <>
-      <main className="flex flex-col w-full items-center p-2 sm:p-8 min-h-screen">
-        <h1 className="text-2xl font-light w-full text-center">
-          A FEW THINGS ABOUT ME 😃
+      <main id="me" className="flex flex-col w-full items-center p-2 sm:p-8 min-h-screen">
+        <h1 className="text-3xl lg:text-4xl font-light pb-12 w-full text-center text-slate-400">
+          A few things about me 😃
         </h1>
-        <section className="flex flex-col w-full md:flex-row p-4 sm:p-8 gap-4 h-fit justify-evenly md:justify-between items-center max-w-[80vw] ">
+        <section className="flex flex-col w-full md:flex-row sm:px-8 p-4 gap-4 h-fit justify-evenly md:justify-between items-center max-w-screen-xl">
           <div className="md:w-1/2">
             <Image src={soccer} alt="" />
           </div>
           <div className="md:w-1/2 text-center md:text-right">
-            <h1 id="home" className="font-light text-xl mt-8 lg:text-3xl">
+            <h1 className="font-light text-xl mt-8 lg:text-3xl">
               I&apos;m pursuing
               <span className="leading-relaxed font-bold text-primary-dark">
                 {" "}
@@ -54,7 +54,7 @@ const About: NextPage = () => {
             </div>
           </div>
         </section>
-        <h1 className="text-2xl font-light w-full text-center">
+        <h1 className="text-3xl lg:text-4xl text-slate-400 font-light pt-12 w-full text-center max-w-screen-xl">
           Tools I Use 🧰
         </h1>
         <TechStack />

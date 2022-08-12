@@ -1,20 +1,10 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import Image from "next/image";
-
-import minimal from "@/assets/minimal.png";
-import weakestres from "@/assets/weakest-result.png";
-import weakestmdesk from "@/assets/weakest-desktop.png";
-
 import { ProjectCard } from "@/components/ProjectCard";
-
-import homeillustration from "@/assets/homeillustration.svg";
-
 const Projects: NextPage = () => {
   return (
     <>
-      <article className="flex flex-col items-center p-8 min-h-screen">
-        <h1 className="border-primary-dark border-b-2 mb-8 p-4 font-bold text-3xl lg:text-4xl">
+      <article id="work" className="flex flex-col items-center p-8 min-h-screen">
+        <h1 className="mb-8 p-4 text-slate-400 font-bold text-3xl lg:text-4xl">
           A few things I&apos;ve built
         </h1>
         <main className="p-4 h-full max-w-screen-lg">

@@ -7,8 +7,8 @@ import homeillustration from "@/assets/homeillustration.svg";
 const Hero: NextPage = () => {
   return (
     <>
-      <main className="flex w-full justify-center p-8 min-h-screen">
-        <section className="flex flex-col w-full md:flex-row sm:p-8 gap-4 justify-evenly md:justify-between items-center max-w-[80vw] ">
+      <main className="flex w-full justify-center  p-8 min-h-screen">
+        <section className="flex flex-col w-full max-w-screen-xl md:flex-row sm:p-8 gap-4 justify-evenly md:justify-between items-center">
           <div className="text-center md:text-left">
             <h3 className="text-2xl">Hello there! 🙋🏻‍♂️ I&apos;m</h3>
             <h1 className="text-primary-dark font-semibold text-4xl mt-4 md:text-5xl lg:text-6xl xl:text-7xl">
@@ -18,10 +18,9 @@ const Hero: NextPage = () => {
               and i build experiences for the web.
             </p>
           </div>
-          <Image          
-            src={homeillustration}
-            alt=""
-          />
+
+            <Image src={homeillustration} alt="" />
+
         </section>
       </main>
     </>

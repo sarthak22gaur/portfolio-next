@@ -72,7 +72,7 @@ function NavbarLinks() {
 
 function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <Link href="#home">
+    <Link href={'#' + label}>
       <li className="flex flex-row  text-sm justify-center cursor-pointer items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark transition-all">
         <i>{icon}</i>
         <span>{label}</span>
