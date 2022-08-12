@@ -25,42 +25,26 @@ export function ProjectCard({
   Repolink: string;
 }) {
   return (
-    <section className="min-h-[40vh] max-h-[70vh] bg-repeat-space group grid grid-cols-2 bg-[url('../assets/weakest-desktop.png')] bg-contain transition-all ">
-      <div className="flex flex-col gap-4 group-hover:backdrop-blur-lg group-hover:backdrop-grayscale transition-all">
-        <p className="text-2xl text-gray-500 group-hover:text-primary-dark group-hover:font-bold w-fit px-8 pt-8 origin-top-left rotate-90 group-hover:rotate-0 transition-all">
-          {Title}
-        </p>
-        <div className="h-full flex flex-col justify-around">
-          <p className="text-xl text-white px-8 scale-x-0 group-hover:scale-x-100 origin-left transition-all delay-75">
-            {Description}
-          </p>
+    <section className="group flex flex-col items-center shadow-2xl p-4 text-justify gap-4">
+      <h2 className="text-2xl text-gray-500 group-hover:text-primary-dark w-fit">
+        {Title}
+      </h2>
 
-          <div className="px-8 scale-x-0 group-hover:scale-x-100 origin-left transition-all delay-150">
-            <ul className="flex py-2 flex-wrap gap-4 text-gray-200">
-              {Tech.map((curr, index) => {
-                return <ProjectStackItem label={curr} key={index} />;
-              })}
-            </ul>
+      <p className="text-xl text-white">{Description}</p>
 
-            <ul className="flex gap-4 py-4">
-              <ProjectCTAItem
-                icon={<FaExternalLinkAlt size="16" />}
-                externalLink={Livelink}
-              />
-              <ProjectCTAItem
-                icon={<SiGithub size="16" />}
-                externalLink={Repolink}
-              />
-            </ul>
-          </div>
-        </div>
-      </div>
+      <ul className="flex py-2 flex-wrap items-center justify-center gap-4 text-gray-200">
+        {Tech.map((curr, index) => {
+          return <ProjectStackItem label={curr} key={index} />;
+        })}
+      </ul>
 
-      <Image
-        className="scale-x-0 group-hover:scale-x-100 origin-left transition-all delay-100"
-        src={weakestres}
-        alt="Main image"
-      />
+      <ul className="flex gap-4 py-4">
+        <ProjectCTAItem
+          icon={<FaExternalLinkAlt size="16" />}
+          externalLink={Livelink}
+        />
+        <ProjectCTAItem icon={<SiGithub size="16" />} externalLink={Repolink} />
+      </ul>
     </section>
   );
 }

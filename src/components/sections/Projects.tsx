@@ -17,7 +17,7 @@ const Projects: NextPage = () => {
         <h1 className="border-primary-dark border-b-2 mb-8 p-4 font-bold text-3xl lg:text-4xl">
           A few things I&apos;ve built
         </h1>
-        <main className="grid auto-rows-fr p-4 gap-24 max-w-[70vw] ">
+        <main className="grid grid-cols-3 p-4 gap-12 h-max max-w-[90vw]">
           <ProjectCard
             Title="Byte the Tech"
             Description="A personal blog. LAUNCHING SOON"
