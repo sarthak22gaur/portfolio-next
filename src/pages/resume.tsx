@@ -1,8 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import { TbFileDownload } from "react-icons/tb";
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  }
+}
 
 const Resume: NextPage = () => {
   return (
@@ -13,18 +18,27 @@ const Resume: NextPage = () => {
           name="description"
           content="A personal portfolio built with Next.js and tailwind"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
       <div className="lg:w-1/3 lg:fixed lg:left-0 z-10 flex flex-col lg:float-left justify-center h-full p-4">
-        {/* <Image
-          className="rounded-full"
-          layout="responsive"
-          width={1}
-          height={1}
-          src="https://storage.googleapis.com/cp_bucket_test/8KKpE4bnrgPr_BSjdodjBBS01657346517231.png"
-          alt=""
-        /> */}
         <div className="flex flex-col gap-2 items-center border-b-2 px-16  text-center py-4 w-full">
           <h1 className="text-4xl text-primary-dark">SARTHAK GAUR</h1>
           <h2 className="text-xl text-slate-300">Software Developer</h2>
