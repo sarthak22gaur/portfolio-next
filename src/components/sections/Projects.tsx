@@ -5,12 +5,12 @@ const Projects: NextPage = () => {
     <>
       <article
         id="work"
-        className="flex flex-col items-center p-8 min-h-screen"
+        className="flex flex-col items-center p-4 sm:p-8 min-h-screen"
       >
-        <h1 className="mb-8 p-4 text-slate-400 font-bold text-3xl lg:text-4xl">
+        <h1 className="mb-8 p-4 text-slate-400 text-center font-bold text-3xl lg:text-4xl">
           A few things I&apos;ve built
         </h1>
-        <main className="p-4 h-full max-w-screen-lg">
+        <main className="p-1 flex flex-col gap-8 sm:p-4 h-full max-w-screen-lg">
           <ProjectCard
             Title="Byte the Tech"
             Description="A personal blog. LAUNCHING SOON"

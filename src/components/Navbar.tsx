@@ -12,7 +12,7 @@ import Link from "next/link";
 function Navbar() {
   return (
     <>
-      <div className="sticky flex z-50 items-center backdrop-blur-3xl w-full">
+      <div className="fixed flex z-50 items-center backdrop-blur-3xl w-full">
         <div className="flex justify-between items-center w-full">
           <Link href="/">
             <span className="cursor-pointer text-primary-dark p-4 text-3xl font-bold lg:pl-12">
@@ -72,7 +72,7 @@ function NavbarLinks() {
 
 function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <Link href={'#' + label}>
+    <Link href={"#" + label}>
       <li className="flex flex-row  text-sm justify-center cursor-pointer items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark transition-all">
         <i>{icon}</i>
         <span>{label}</span>
@@ -83,13 +83,13 @@ function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
 
 function NavbarCTA({ label, pagelink }: { label: string; pagelink: string }) {
   return (
-    <li>
-      <a href={pagelink}>
-        <div className="flex flex-row justify-center items-center text-sm gap-2 m-2 px-4 py-2 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark transition-all">
-          <span>{label}</span>
-        </div>
+    <Link href={pagelink}>
+      <a target="_blank" rel="noopener noreferrer">
+        <li className="flex flex-row justify-center items-center text-sm gap-2 m-2 px-4 py-2 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark transition-all">
+          {label}
+        </li>
       </a>
-    </li>
+    </Link>
   );
 }
 
