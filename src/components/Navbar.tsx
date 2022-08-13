@@ -48,7 +48,7 @@ function MobileMenu() {
     <>
       <nav className="h-fit z-10 fixed top-0 sm:hidden items-center w-full">
         {isOpen ? (
-          <div className="backdrop-blur-3xl pb-2">
+          <div className="backdrop-blur-3xl backdrop-brightness-50 pb-2">
             {closeMenu}
             <NavbarLinks />
           </div>
