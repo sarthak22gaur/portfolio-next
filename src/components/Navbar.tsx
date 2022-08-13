@@ -15,7 +15,7 @@ function Navbar() {
       <div className="fixed flex z-50 items-center justify-center backdrop-blur-3xl p-2 w-full">
         <div className="flex justify-between w-full sm:w-3/4 items-center ">
           <Link href="/">
-            <span className="cursor-pointer text-primary-dark text-3xl font-bold">
+            <span className="cursor-pointer z-20 text-primary-dark text-3xl font-bold">
               Sg.
             </span>
           </Link>
@@ -46,9 +46,9 @@ function MobileMenu() {
   );
   return (
     <>
-      <nav className="h-fit z-10 fixed top-0 sm:hidden items-center w-full">
+      <nav className="h-fit backdrop-blur-3xl z-10 fixed top-0 sm:hidden items-center w-full">
         {isOpen ? (
-          <div className="backdrop-blur-3xl backdrop-brightness-50 pb-2">
+          <div className="backdrop-blur-3xl pb-2">
             {closeMenu}
             <NavbarLinks />
           </div>
