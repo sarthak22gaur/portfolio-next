@@ -4,12 +4,13 @@ import Image from "next/image";
 
 import { SiLinkedin, SiGithub } from "react-icons/si";
 import soccer from "@/assets/soccer2.svg";
+import ParticleBg from "@/components/Particles";
 
 import TechStack from "@/components/TechStack";
 
 const About: NextPage = () => {
   return (
-    <>
+    
       <main
         id="me"
         className="flex flex-col w-full items-center p-2 sm:p-8 min-h-screen"
@@ -69,7 +70,7 @@ const About: NextPage = () => {
         </h1>
         <TechStack />
       </main>
-    </>
+  
   );
 };
 
