@@ -33,12 +33,12 @@ export function ProjectCard({
           />
         </div>
 
-        <div className="h-full flex gap-4 flex-col justify-center items-center md:items-end col-span-6 col-start-7 z-10 lg:z-0 row-span-1 row-start-1 lg:-translate-x-1/2 lg:group-hover:translate-x-0 lg:transition-all  lg:group-hover:z-10">
+        <div className="h-full flex gap-4 flex-col justify-center items-center md:items-end col-span-6 col-start-7 z-10 row-span-1 row-start-1 lg:z-0 lg:group-hover:z-10 lg:-translate-x-1/2 lg:group-hover:translate-x-0 lg:transition-all lg:scale-x-0 scale  lg:group-hover:scale-x-100">
           <h2 className="text-2xl  p-4 text-gray-500 group-hover:text-primary-dark w-fit ">
             {Title}
           </h2>
 
-          <div className="flex flex-col w-full gap-4 p-4 justify-center items-center md:items-end bg-black rounded">
+          <div className="flex flex-col w-full gap-4 p-4 justify-center items-center md:items-end md:bg-black rounded">
             <p className="text-base w-full text-gray-300 text-center md:text-right">{Description}</p>
             <ul className="flex justify-center md:justify-end flex-wrap gap-4 text-gray-200">
               {Tech.map((curr, index) => {

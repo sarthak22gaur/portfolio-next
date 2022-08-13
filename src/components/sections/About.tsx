@@ -1,11 +1,7 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 import Image from "next/image";
-
 import { SiLinkedin, SiGithub } from "react-icons/si";
 import soccer from "@/assets/soccer2.svg";
-import ParticleBg from "@/components/Particles";
-
 import TechStack from "@/components/TechStack";
 
 const About: NextPage = () => {
@@ -18,11 +14,17 @@ const About: NextPage = () => {
         <h1 className="text-3xl lg:text-4xl font-light pb-12 w-full text-center text-slate-400">
           A few things about me 😃
         </h1>
-        <section className="flex flex-col w-full md:flex-row sm:px-8 p-4 gap-4 h-fit justify-evenly md:justify-between items-center max-w-screen-xl">
-          <div className="md:w-1/2">
-            <Image src={soccer} alt="" />
+        <section className="flex flex-col md:grid md:grid-cols-2 w-full md:flex-row sm:px-8 p-4 gap-4 h-fit justify-evenly md:justify-between items-center max-w-screen-xl">
+        <div className="md:col-span-1 w-full h-fit">
+            <Image
+              src="https://storage.googleapis.com/cp_bucket_test/port_about_illustration.svg"
+              alt=""
+              width={16}
+              height={9}
+              layout='responsive'
+            />
           </div>
-          <div className="md:w-1/2 text-center md:text-right">
+          <div className="md:col-span-1 text-center md:text-right">
             <h1 className="font-light text-xl mt-8 lg:text-3xl">
               I&apos;m pursuing
               <span className="leading-relaxed font-bold text-primary-dark">

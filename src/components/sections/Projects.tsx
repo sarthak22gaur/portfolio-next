@@ -16,16 +16,16 @@ const Projects: NextPage = () => {
             Description="A personal blog. LAUNCHING SOON"
             Livelink="https://btt.skgr.xyz/"
             Repolink="github.com"
-            ImageURL="https://storage.googleapis.com/cp_bucket_test/8KKpE4bnrgPr_BSjdodjBBS01657346517231.png"
+            ImageURL="https://storage.googleapis.com/cp_bucket_test/btt-showcase.png"
             Tech={["Nextjs", "tRPC", "NextAuth", "TailwindCSS", "MySQL"]}
           />
 
           <ProjectCard
             Title="Weakest Z-Fighter"
-            Description="A polling website made with the t3 stack to get familiar with tRPC and tailwind and to finally find out who is the weakest among all the Z-fighters. The data was scraped from MyAnimeList using a Go web scraper"
+            Description="Polling website made with the t3 stack to get familiar with tRPC. The data was scraped from MyAnimeList using a Go web scraper"
             Livelink="https://weakest.skgr.xyz/"
             Repolink="https://github.com/sarthak22gaur/weakest-z"
-            ImageURL="https://storage.googleapis.com/cp_bucket_test/8KKpE4bnrgPr_BSjdodjBBS01657346517231.png"
+            ImageURL="https://storage.googleapis.com/cp_bucket_test/weakest-showcase.png"
             Tech={["tRPC", "Nextjs", "TailwindCSS", "MySQL"]}
           />
         </main>

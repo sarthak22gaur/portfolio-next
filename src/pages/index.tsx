@@ -6,6 +6,12 @@ import Projects from "@/components/sections/Projects";
 import Navbar from "../components/Navbar";
 import ParticleBg from "@/components/Particles";
 
+export async function getStaticProps() {
+  return {
+    props: {},
+  }
+}
+
 const Home: NextPage = () => {
   return (
     <>

@@ -12,10 +12,10 @@ import Link from "next/link";
 function Navbar() {
   return (
     <>
-      <div className="fixed flex z-50 items-center backdrop-blur-3xl w-full">
-        <div className="flex justify-between items-center w-full">
+      <div className="fixed flex z-50 items-center justify-center backdrop-blur-3xl p-2 w-full">
+        <div className="flex justify-between w-full sm:w-3/4 items-center ">
           <Link href="/">
-            <span className="cursor-pointer text-primary-dark p-4 text-3xl font-bold lg:pl-12">
+            <span className="cursor-pointer text-primary-dark text-3xl font-bold">
               Sg.
             </span>
           </Link>
