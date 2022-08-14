@@ -27,10 +27,10 @@ const ParticleBg = () => {
         fpsLimit: 120,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
+            // onClick: {
+            //   enable: true,
+            //   mode: "repulse",
+            // },
             onHover: {
               enable: true,
               mode: "attract",
@@ -51,30 +51,30 @@ const ParticleBg = () => {
           color: {
             value: "#ffffff",
           },
-          //   links: {
-          //     color: "#ffffff",
-          //     distance: 150,
-          //     enable: true,
-          //     opacity: 0.5,
-          //     width: 1,
-          //   },
-          //   collisions: {
-          //     enable: true,
-          //   },
+            // links: {
+            //   color: "#ffffff",
+            //   distance: 150,
+            //   enable: true,
+            //   opacity: 0.5,
+            //   width: 1,
+            // },
+            // collisions: {
+            //   enable: true,
+            // },
           move: {
             direction: "none",
             enable: true,
-            // outModes: {
-            //   default: "bounce",
-            // },
-            random: false,
-            speed: 0.2,
+            outModes: {
+              default: "destroy",
+            },
+            random: true,
+            speed: 0.5,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 1440,
             },
             value: 80,
           },

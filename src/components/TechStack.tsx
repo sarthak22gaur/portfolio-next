@@ -20,7 +20,7 @@ function TechCard({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <div className="w-fit md:w-40 m-4 shadow-xl">
       <Tilt>
-        <div className="bg-black text-white rounded-xl flex flex-col p-4 lg:p-8 w-full text-2xl jusify-center items-center hover:text-primary-dark group transition-all">
+        <div className="bg-black text-white rounded-xl flex flex-col p-4 lg:p-8 w-full text-2xl jusify-center items-center hover:text-primary-dark group transition-colors">
           <i className="md:translate-y-6 group-hover:translate-y-0 transition-all">{icon}</i>
           <span className="mt-4 hidden md:scale-0 group-hover:scale-100 md:block transition-all">{label}</span>
         </div>
