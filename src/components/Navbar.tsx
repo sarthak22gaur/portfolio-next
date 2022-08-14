@@ -14,7 +14,7 @@ function Navbar() {
     <>
       <div className="fixed flex z-50 items-center justify-center backdrop-blur-3xl p-2 w-full">
         <div className="flex justify-between w-full sm:w-3/4 items-center ">
-          <Link href="/">
+          <Link className="underline-hover" href="/">
             <span className="cursor-pointer z-20 text-primary-dark text-3xl font-bold">
               Sg.
             </span>
@@ -73,7 +73,7 @@ function NavbarLinks() {
 function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <Link href={"#" + label}>
-      <li className="flex flex-row  text-sm justify-center cursor-pointer items-center gap-2 mx-2 my-4 px-2  text-white hover:text-primary-dark transition-all">
+      <li className="underline-hover flex flex-row text-base justify-center cursor-pointer items-center gap-2 mx-2 p-2  text-white hover:text-primary-dark transition-all">
         <i>{icon}</i>
         <span>{label}</span>
       </li>

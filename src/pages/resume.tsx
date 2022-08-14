@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Link from "next/link";
+import SEO from "@/components/SEO"
 import { TbFileDownload } from "react-icons/tb";
 
 export async function getStaticProps() {
@@ -12,31 +12,7 @@ export async function getStaticProps() {
 const Resume: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Sarthak Gaur</title>
-        <meta
-          name="description"
-          content="A personal portfolio built with Next.js and tailwind"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-      </Head>
+     <SEO title="Resume-Sarthak Gaur"/>
 
       <div className="lg:w-1/3 lg:fixed lg:left-0 z-10 flex flex-col lg:float-left justify-center h-full p-4">
         <div className="flex flex-col gap-2 items-center border-b-2 px-16  text-center py-4 w-full">

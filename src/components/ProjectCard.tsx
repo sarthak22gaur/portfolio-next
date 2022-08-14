@@ -34,12 +34,19 @@ export function ProjectCard({
         </div>
 
         <div className="h-full flex gap-4 flex-col justify-center items-center md:items-end col-span-6 col-start-7 z-10 row-span-1 row-start-1 lg:z-0 lg:group-hover:z-10 lg:-translate-x-1/2 lg:group-hover:translate-x-0 lg:transition-all lg:scale-x-0 scale  lg:group-hover:scale-x-100">
-          <h2 className="text-2xl  p-4 text-gray-500 group-hover:text-primary-dark w-fit ">
+          <a
+            href={Livelink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer underline-hover text-2xl px-4 py-2 text-gray-500 group-hover:text-primary-dark w-fit "
+          >
             {Title}
-          </h2>
+          </a>
 
           <div className="flex flex-col w-full gap-4 p-4 justify-center items-center md:items-end md:bg-black rounded">
-            <p className="text-base w-full text-gray-300 text-center md:text-right">{Description}</p>
+            <p className="text-base w-full text-gray-300 text-center md:text-right">
+              {Description}
+            </p>
             <ul className="flex justify-center md:justify-end flex-wrap gap-4 text-gray-200">
               {Tech.map((curr, index) => {
                 return <ProjectStackItem label={curr} key={index} />;
@@ -64,7 +71,11 @@ export function ProjectCard({
 }
 
 function ProjectStackItem({ label }: { label: string }) {
-  return <li className="text-center md:text-right text-primary-dark text-sm">{label}</li>;
+  return (
+    <li className="text-center md:text-right text-primary-dark text-sm">
+      {label}
+    </li>
+  );
 }
 
 function ProjectCTAItem({
