@@ -21,7 +21,7 @@ export function ProjectCard({
   Repolink: string;
 }) {
   return (
-    <Tilt tiltMaxAngleX={1} tiltMaxAngleY={1}>
+
       <section className="group md:h-[500px] md:grid md:grid-cols-12 md:grid-rows-1 items-center justify-center shadow-2xl p-2 sm:p-4 text-justify gap-4">
         <div className="w-full z-10 flex flex-col justify-center h-full col-span-8 col-start-1 row-span-1 row-start-1 lg:translate-x-1/4 lg:group-hover:translate-x-0 lg:blur-sm lg:group-hover:blur-none lg:transition-all">
           <Image
@@ -66,7 +66,7 @@ export function ProjectCard({
           </ul>
         </div>
       </section>
-    </Tilt>
+
   );
 }
 
