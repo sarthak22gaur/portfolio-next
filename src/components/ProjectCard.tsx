@@ -1,7 +1,8 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
-import Tilt from "react-parallax-tilt";
 import Image from "next/image";
+
+// TODO: Add focus: CSS
 
 export function ProjectCard({
   Title,
@@ -23,7 +24,7 @@ export function ProjectCard({
   return (
 
       <section className="group md:h-[500px] md:grid md:grid-cols-12 md:grid-rows-1 items-center justify-center shadow-2xl p-2 sm:p-4 text-justify gap-4">
-        <div className="w-full z-10 flex flex-col justify-center h-full col-span-8 col-start-1 row-span-1 row-start-1 lg:translate-x-1/4 lg:group-hover:translate-x-0 lg:blur-sm lg:group-hover:blur-none lg:transition-all">
+        <div className="w-full z-10 flex flex-col justify-center h-full col-span-8 col-start-1 row-span-1 row-start-1 lg:translate-x-1/4 lg:group-focus-within:translate-x-0 lg:group-focus-within:blur-none lg:group-hover:translate-x-0 lg:blur-sm lg:group-hover:blur-none lg:transition-all">
           <Image
             layout="responsive"
             width={16}
@@ -33,7 +34,7 @@ export function ProjectCard({
           />
         </div>
 
-        <div className="h-full flex gap-4 flex-col justify-center items-center md:items-end col-span-6 col-start-7 z-10 row-span-1 row-start-1 lg:z-0 lg:group-hover:z-10 lg:-translate-x-1/2 lg:group-hover:translate-x-0 lg:transition-all lg:scale-x-0 scale  lg:group-hover:scale-x-100">
+        <div className="h-full flex gap-4 flex-col justify-center items-center md:items-end col-span-6 col-start-7 z-10 row-span-1 row-start-1 lg:z-0  lg:-translate-x-1/2 lg:scale-x-0 lg:group-hover:z-10 lg:group-hover:translate-x-0 lg:group-hover:scale-x-100 lg:group-focus-within:z-10 lg:group-focus-within:translate-x-0 lg:group-focus-within:scale-x-100 lg:transition-all">
           <a
             href={Livelink}
             target="_blank"
