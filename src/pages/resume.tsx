@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import SEO from "@/components/SEO";
 import { TbFileDownload } from "react-icons/tb";
-import { saveAs } from "file-saver";
 
 export async function getStaticProps() {
   return {
