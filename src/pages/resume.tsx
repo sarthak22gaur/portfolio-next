@@ -1,54 +1,77 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import SEO from "@/components/SEO"
+import SEO from "@/components/SEO";
 import { TbFileDownload } from "react-icons/tb";
+import { saveAs } from "file-saver";
 
 export async function getStaticProps() {
   return {
     props: {},
-  }
+  };
 }
 
 const Resume: NextPage = () => {
   return (
     <>
-     <SEO title="Resume-Sarthak Gaur"/>
+      <SEO title="Resume-Sarthak Gaur" />
 
       <div className="lg:w-1/3 lg:fixed lg:left-0 z-10 flex flex-col lg:float-left justify-center h-full p-4">
         <div className="flex flex-col gap-2 items-center border-b-2 px-16  text-center py-4 w-full">
-          <h1 className="text-4xl text-primary-dark">SARTHAK GAUR</h1>
-          <h2 className="text-xl text-slate-300">Software Developer</h2>
+          <h1 className="text-2xl sm:text-4xl text-primary-dark">
+            SARTHAK GAUR
+          </h1>
+          <h2 className="text-base sm:text-xl text-slate-300">
+            Software Developer
+          </h2>
         </div>
 
         <ul className="flex flex-wrap justify-center lg:justify-around w-full gap-4 p-4 text-sm text-slate-400">
           <div className="text-center sm:flex lg:flex-col">
-            <li className="p-2">858-414-2310</li>
             <Link href="/">
-              <li className="p-2">sarthak22gaur@gmail.com</li>
+              <li className="p-2 underline-hover cursor-pointer">
+                sarthak22gaur@gmail.com
+              </li>
             </Link>
+            <a href="https://www.skgr.xyz/">
+              <li className="p-2  underline-hover">skgr.xyz</li>
+            </a>
           </div>
           <div className="text-center sm:flex lg:flex-col">
-            <Link href="/">
-              <li className="p-2">skgr.xyz</li>
-            </Link>
-            <Link href="/">
-              <li className="p-2">github/sarthak22gaur</li>
-            </Link>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/sarthak-gaur-22041998/"
+            >
+              <li className="p-2 underline-hover">linkedin</li>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/sarthak22gaur"
+            >
+              <li className="p-2  underline-hover">github</li>
+            </a>
           </div>
         </ul>
-        <div className="hidden lg:flex justify-center w-full pt-8">
-          <button className="flex px-8 py-2 rounded-lg gap-4 text-gray-200 hover:bg-slate-800 hover:text-primary-dark items-center bg-slate-700 transition-colors">
-            <TbFileDownload size={32}/>
+        <a
+          href="https://storage.googleapis.com/cp_bucket_test/resume_sarthak_gaur.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:flex justify-center w-full pt-8"
+        >
+          <div className="flex px-8 py-2 rounded-lg gap-4 text-gray-200 hover:bg-slate-800 hover:text-primary-dark items-center bg-slate-700 transition-colors">
+            <TbFileDownload size={32} />
             <p>Grab a copy</p>
-          </button>
-        </div>
+          </div>
+        </a>
       </div>
 
       <main className="p-4 lg:absolute lg:right-0 flex flex-col gap-4 items-center text-white lg:w-2/3 text-xs">
         <section className="h-full gap-2 p-2 flex">
           <div className="w-1/3 sticky p-2 flex flex-col gap-2 bg-slate-800">
             <article>
-              <h1 className="pb-4 text-lg text-primary-dark underline underline-offset-8 font-bold">
+              <h1 className="pb-4 text-base sm:text-lg text-primary-dark underline underline-offset-8 font-bold">
                 Skills
               </h1>
               <SkillsCard
@@ -89,7 +112,7 @@ const Resume: NextPage = () => {
             </article>
 
             <article>
-              <h1 className="pb-4 text-lg text-primary-dark underline underline-offset-8 font-bold">
+              <h1 className="pb-4 text-base sm:text-lg text-primary-dark underline underline-offset-8 font-bold">
                 Education
               </h1>
               <EdCard
@@ -108,7 +131,7 @@ const Resume: NextPage = () => {
           </div>
 
           <div className="w-2/3 p-2 flex flex-col gap-2">
-            <h1 className="pb-4 text-lg text-primary-dark underline underline-offset-8 font-bold">
+            <h1 className="pb-4 text-base sm:text-lg text-primary-dark underline underline-offset-8 font-bold">
               Experiences
             </h1>
 
@@ -134,7 +157,7 @@ const Resume: NextPage = () => {
               ]}
             />
 
-            <h1 className="pb-4 text-lg text-primary-dark underline underline-offset-8 font-bold">
+            <h1 className="pb-4 text-base sm:text-lg text-primary-dark underline underline-offset-8 font-bold">
               Projects
             </h1>
 
@@ -168,8 +191,8 @@ const SkillsCard: React.FC<{ heading: string; items: Array<string> }> = (
 ) => {
   return (
     <>
-      <h2 className="text-base pb-2 font-bold">{props.heading}</h2>
-      <ul className="pb-4 text-sm text-gray-400 font-light flex flex-wrap gap-2">
+      <h2 className="text-sm sm:text-base pb-2 font-bold">{props.heading}</h2>
+      <ul className="pb-4 text-xs sm:text-sm text-gray-400 font-light flex flex-wrap gap-2">
         {props.items.map((curr, index) => {
           return <li key={index}>{curr}</li>;
         })}
@@ -185,9 +208,11 @@ const EdCard: React.FC<{
 }> = (props) => {
   return (
     <>
-      <h2 className="text-base font-bold pb-3">{props.heading}</h2>
-      <h3 className="text-sm text-gray-400 pb-2">{props.duration}</h3>
-      <p className="text-sm pb-6">{props.content}</p>
+      <h2 className="text-sm sm:text-base font-bold pb-3">{props.heading}</h2>
+      <h3 className="text-xs sm:text-sm text-gray-400 pb-2">
+        {props.duration}
+      </h3>
+      <p className="text-xs sm:text-sm pb-6">{props.content}</p>
     </>
   );
 };
@@ -201,11 +226,13 @@ const ExpCard: React.FC<{
   return (
     <>
       <article>
-        <h2 className="text-base pb-3">
+        <h2 className="text-sm sm:text-base pb-3">
           <span className="font-bold">{props.position}</span> @ {props.heading}
         </h2>
-        <h3 className="text-sm text-gray-400 pb-2">{props.duration}</h3>
-        <ul className="list-disc text-sm list-outside pl-4 pb-4">
+        <h3 className="text-xs sm:text-sm text-gray-400 pb-2">
+          {props.duration}
+        </h3>
+        <ul className="list-disc text-xs sm:text-sm list-outside pl-4 pb-4">
           {props.items.map((curr, index) => {
             return <li key={index}>{curr}</li>;
           })}
