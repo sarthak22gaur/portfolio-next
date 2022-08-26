@@ -84,11 +84,9 @@ function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
 function NavbarCTA({ label, pagelink }: { label: string; pagelink: string }) {
   return (
     <Link href={pagelink}>
-      <a target="_blank" rel="noopener noreferrer">
-        <li className="flex flex-row justify-center items-center text-sm gap-2 m-2 px-4 py-2 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark transition-all">
-          {label}
-        </li>
-      </a>
+      <li className="flex flex-row justify-center items-center cursor-pointer text-sm gap-2 m-2 px-4 py-2 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark transition-all">
+        {label}
+      </li>
     </Link>
   );
 }
