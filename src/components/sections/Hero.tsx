@@ -1,10 +1,6 @@
-import type { NextPage } from "next";
-import Link from "next/link";
 import Image from "next/image";
 
-
-
-const Hero: NextPage = () => {
+const Hero: React.FC = () => {
   return (
     <>
       <main className="flex w-full justify-center items-center p-8 min-h-screen">
@@ -26,7 +22,7 @@ const Hero: NextPage = () => {
               alt=""
               width={16}
               height={9}
-              layout='responsive'
+              layout="responsive"
             />
           </div>
         </section>

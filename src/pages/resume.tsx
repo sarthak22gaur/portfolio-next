@@ -15,7 +15,7 @@ const Resume: NextPage = () => {
       <SEO title="Resume-Sarthak Gaur" />
 
       <div className="lg:w-1/3 lg:fixed lg:left-0 z-10 flex flex-col lg:float-left justify-center h-full p-4">
-        <div className="flex flex-col gap-2 items-center border-b-2 px-16  text-center py-4 w-full">
+        <div className="flex flex-col gap-2 items-center border-b-2 lg:px-16 text-center py-4 w-full">
           <h1 className="text-2xl sm:text-4xl text-primary-dark">
             SARTHAK GAUR
           </h1>
@@ -24,7 +24,7 @@ const Resume: NextPage = () => {
           </h2>
         </div>
 
-        <ul className="flex flex-wrap justify-center lg:justify-around w-full gap-4 p-4 text-sm text-slate-400">
+        <ul className="flex flex-wrap justify-center lg:justify-around w-full lg:gap-4 p-2 lg:p-4 text-sm underline underline-offset-2 decoration-primary-dark lg:no-underline text-slate-400">
           <div className="text-center sm:flex lg:flex-col">
             <Link href="/">
               <li className="p-2 underline-hover cursor-pointer">
@@ -57,20 +57,70 @@ const Resume: NextPage = () => {
           download
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden lg:flex justify-center w-full pt-8"
+          className="flex justify-center items-center w-full lg:pt-8"
         >
-          <div className="flex px-8 py-2 rounded-lg gap-4 text-gray-200 hover:bg-slate-800 hover:text-primary-dark items-center bg-slate-700 transition-colors">
-            <TbFileDownload size={32} />
-            <p>Grab a copy</p>
+          <div className="flex px-4 lg:px-8 py-1 lg:py-2 rounded lg:rounded-lg gap-4 text-gray-200 hover:bg-slate-800 hover:text-primary-dark items-center bg-slate-700 transition-colors">
+            <TbFileDownload size={24} />
+            <p className="text-sm sm:text-base">Grab a copy</p>
           </div>
         </a>
       </div>
 
-      <main className="p-4 lg:absolute lg:right-0 flex flex-col gap-4 items-center text-white lg:w-2/3 text-xs">
+      <main className="lg:p-4 lg:absolute lg:right-0 flex flex-col gap-4 items-center text-white lg:w-2/3 text-xs">
         <section className="h-full gap-2 p-2 flex">
-          <div className="w-1/3 sticky p-2 flex flex-col gap-2 bg-slate-800">
+          <div className="w-2/3 p-2 flex flex-col gap-2">
+            <h1 className="pb-4 text-sm sm:text-base text-primary-dark underline underline-offset-8 font-bold">
+              Experiences
+            </h1>
+
+            <ExpCard
+              position="Developer"
+              heading="TollRing"
+              duration="July 2020 - July 2021"
+              description="Worked on Analytics 365 (an analytics app for Microsoft Teams)"
+              items={[
+                "Building and integrating authentication and authorization in Microsoft Teams (Tabs and Bots) using OAuth2.0 and OpenIDConnect",
+                "Building RESTful APIs for authentication and authorization",
+                "Creating chatbot for Analytics 365",
+              ]}
+            />
+            <ExpCard
+              position="Embedded Intern"
+              heading="PureSoftware"
+              description=""
+              duration="May - July 2019"
+              items={[
+                "Porting of Delve (debugger for Go) from x86-64 architecture to Aarch-64 architecture for Windows on Arm devices",
+                "Cross-compiling JDK-11 for Windows running on an Aarch-64 for Windows on ARM devices.",
+              ]}
+            />
+
+            <h1 className="pb-4 text-sm sm:text-base text-primary-dark underline underline-offset-8 font-bold">
+              Projects
+            </h1>
+
+            <ProjectCard
+              title="Byte the Tech"
+              description="Personal blog"
+              summary="Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+              items={[
+                "Next.js",
+                "tRPC",
+                "NextAuth",
+                "TailwindCSS",
+                "Contentful",
+              ]}
+            />
+            <ProjectCard
+              title="Weakest-Z"
+              description="A polling website"
+              summary="Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+              items={["Next.js", "tRPC", "Planetscale"]}
+            />
+          </div>
+          <div className="w-1/3 sticky p-2 flex flex-col gap-2">
             <article>
-              <h1 className="pb-4 text-base sm:text-lg text-primary-dark underline underline-offset-8 font-bold">
+              <h1 className="pb-4 text-sm sm:text-base text-primary-dark underline underline-offset-8 font-bold">
                 Skills
               </h1>
               <SkillsCard
@@ -93,91 +143,34 @@ const Resume: NextPage = () => {
                   "NextAuth",
                   "Prisma",
                   "tRPC",
-                  "Auth0",
+                  "TailwindCSS",
                 ]}
               />
               <SkillsCard
                 heading="Platforms/ Tools"
-                items={[
-                  "Git",
-                  "C++",
-                  "Docker",
-                  "Planescale",
-                  "Vercel",
-                  "Netlify",
-                ]}
+                items={["Git", "Docker", "Planescale", "Vercel", "Contentful"]}
               />
               <SkillsCard heading="Design" items={["Figma"]} />
             </article>
 
             <article>
-              <h1 className="pb-4 text-base sm:text-lg text-primary-dark underline underline-offset-8 font-bold">
+              <h1 className="pb-4 text-sm sm:text-base text-primary-dark underline underline-offset-8 font-bold">
                 Education
               </h1>
               <EdCard
                 heading="The University of Texas at Dallas"
-                content=" Master of Science in Computer Science. Major in Systems"
+                content="Master's in Computer Science"
                 duration="2021 - Present"
+                gpa="3.7"
               />
               <EdCard
-                heading=" National Institute of Technology, Kurukshetra"
+                heading="Indian Institute of Information Technology, Sonepat, India"
                 content="Bachelor of Technology in Electronics and Communication
-                  Engineering. Major in Digital Systems. Minor in Communication
-                  Systems"
+                  Engineering."
                 duration="2016 - 2020"
+                gpa="7.92"
               />
             </article>
-          </div>
-
-          <div className="w-2/3 p-2 flex flex-col gap-2">
-            <h1 className="pb-4 text-base sm:text-lg text-primary-dark underline underline-offset-8 font-bold">
-              Experiences
-            </h1>
-
-            <ExpCard
-              position="Developer"
-              heading="TollRing Noida, Delhi"
-              duration="July 2020 - July 2021"
-              items={[
-                "Building and integrating authentication and authorization in Microsoft Teams (Tabs and Bots) using OAuth2.0 and OpenIDConnect",
-                "Building API endpoints to fetch data from Microsoft Graph for Teams",
-                "Creating chatbot for Analytics 365",
-                "Building windows services using background services and the worker service template for long running logging and backup applications",
-              ]}
-            />
-            <ExpCard
-              position="Embedded Intern"
-              heading="PureSoftware Noida, Delhi"
-              duration="May - July 2019"
-              items={[
-                "Porting of Delve (debugger for Go) from x86-64 architecture to Aarch-64 architecture for Windows on Arm devices",
-                "Testing and debugging various applications using Go",
-                "Cross-compiling JDK-11 for Windows running on an Aarch-64 for Windows on ARM devices.",
-              ]}
-            />
-
-            <h1 className="pb-4 text-base sm:text-lg text-primary-dark underline underline-offset-8 font-bold">
-              Projects
-            </h1>
-
-            <ExpCard
-              position="Fake News Detection"
-              heading="National Institute of Technology, Kurukshetra"
-              duration="Jan 2020 - April 2021"
-              items={[
-                "Worked with a team of 3 people to build an application to detect fake news on Twitter using NLP",
-                "Researched through various existing methodologies for Linguistic and Network Approaches to create the Training, Testing and Prediction Modules for the application",
-              ]}
-            />
-            <ExpCard
-              position="Facial Recognition based Attendance System"
-              heading="NIT, Kurukshetra"
-              duration="Aug - Dec 2019"
-              items={[
-                "Project aimed at removing the manual attendance system, currently being used in the institution. It was capable of simultaneously marking attendance for a large group.",
-                "Built modules for capturing, detecting and recognizing faces and training the data set",
-              ]}
-            />
           </div>
         </section>
       </main>
@@ -189,30 +182,32 @@ const SkillsCard: React.FC<{ heading: string; items: Array<string> }> = (
   props
 ) => {
   return (
-    <>
-      <h2 className="text-sm sm:text-base pb-2 font-bold">{props.heading}</h2>
+    <div className="text-sm flex flex-col gap-2">
+      <h2 className="font-bold">{props.heading}</h2>
       <ul className="pb-4 text-xs sm:text-sm text-gray-400 font-light flex flex-wrap gap-2">
         {props.items.map((curr, index) => {
           return <li key={index}>{curr}</li>;
         })}
       </ul>
-    </>
+    </div>
   );
 };
 
 const EdCard: React.FC<{
   heading: string;
   duration: string;
+  gpa: string;
   content: string;
 }> = (props) => {
   return (
-    <>
-      <h2 className="text-sm sm:text-base font-bold pb-3">{props.heading}</h2>
-      <h3 className="text-xs sm:text-sm text-gray-400 pb-2">
-        {props.duration}
-      </h3>
-      <p className="text-xs sm:text-sm pb-6">{props.content}</p>
-    </>
+    <div className="text-xs sm:text-sm flex flex-col gap-2 pb-4">
+      <h2 className="font-bold">
+        {props.heading} -{" "}
+        <span className="font-light italic">{props.content}</span>
+      </h2>
+      <h3 className="text-gray-400">GPA: {props.gpa}</h3>
+      <h3 className="text-gray-400">{props.duration}</h3>
+    </div>
   );
 };
 
@@ -220,18 +215,51 @@ const ExpCard: React.FC<{
   heading: string;
   position: string;
   duration: string;
+  description: string;
   items: Array<string>;
 }> = (props) => {
   return (
     <>
-      <article>
-        <h2 className="text-sm sm:text-base pb-3">
-          <span className="font-bold">{props.position}</span> @ {props.heading}
+      <article className="flex flex-col gap-2 text-xs sm:text-sm pb-4">
+        <h2 className="text-sm sm:text-base">
+          <span className="italic">{props.position}</span> @{" "}
+          <span className="font-bold">{props.heading}, </span>India
         </h2>
-        <h3 className="text-xs sm:text-sm text-gray-400 pb-2">
-          {props.duration}
-        </h3>
-        <ul className="list-disc text-xs sm:text-sm list-outside pl-4 pb-4">
+        <h4 className="text-gray-400">{props.duration}</h4>
+        <p className="font-bold">
+          Project :{" "}
+          <span className="font-normal text-gray-400">{props.description}</span>
+        </p>
+
+        <ul className="list-disc list-outside pl-4 sm:pl-8 text-gray-400">
+          {props.items.map((curr, index) => {
+            return <li key={index}>{curr}</li>;
+          })}
+        </ul>
+      </article>
+    </>
+  );
+};
+const ProjectCard: React.FC<{
+  title: string;
+  summary: string;
+  description: string;
+  items: Array<string>;
+}> = (props) => {
+  return (
+    <>
+      <article className="flex flex-col gap-2 text-xs sm:text-sm pb-4">
+        <h2 className="text-sm sm:text-base">
+          <span className="font-bold">{props.title}</span> -{" "}
+          <span className="italic">{props.description}</span>
+        </h2>
+
+        <p className="font-bold">
+          <span className="font-normal text-gray-400">{props.summary}</span>
+        </p>
+
+        <ul className="flex flex-wrap gap-2 sm:gap-4 text-gray-400">
+          <span className="font-bold">Stack:</span>
           {props.items.map((curr, index) => {
             return <li key={index}>{curr}</li>;
           })}

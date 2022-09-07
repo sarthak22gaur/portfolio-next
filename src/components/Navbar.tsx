@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { AiFillProject } from "react-icons/ai";
-import {
-  BsFillHouseFill,
-  BsFillPersonFill,
-  BsFillFileEarmarkFill,
-} from "react-icons/bs";
+import { BsFillPersonFill } from "react-icons/bs";
 
 import Link from "next/link";
 
 function Navbar() {
   return (
     <>
-      <div className="fixed flex z-50 items-center justify-center backdrop-blur-3xl p-2 w-full">
+      <div className="fixed flex z-30 items-center justify-center backdrop-blur-3xl p-2 w-full">
         <div className="flex justify-between w-full sm:w-3/4 items-center ">
           <Link className="underline-hover" href="/">
             <span className="cursor-pointer z-20 text-primary-dark text-3xl font-bold">

@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
 import { ProjectCard } from "@/components/ProjectCard";
-const Projects: NextPage = () => {
+
+const Projects: React.FC = () => {
   return (
     <>
       <article

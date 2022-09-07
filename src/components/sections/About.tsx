@@ -1,10 +1,7 @@
-import type { NextPage } from "next";
 import Image from "next/image";
 import { SiLinkedin, SiGithub } from "react-icons/si";
-import soccer from "@/assets/soccer2.svg";
-import TechStack from "@/components/TechStack";
 
-const About: NextPage = () => {
+const About: React.FC = () => {
   return (
     
       <main
@@ -67,10 +64,6 @@ const About: NextPage = () => {
             </div>
           </div>
         </section>
-        <h1 className="text-3xl lg:text-4xl text-slate-400 font-light pt-12 w-full text-center max-w-screen-xl">
-          Tools I Use 🧰
-        </h1>
-        <TechStack />
       </main>
   
   );
