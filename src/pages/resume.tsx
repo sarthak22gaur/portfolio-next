@@ -24,7 +24,7 @@ const Resume: NextPage = () => {
           </h2>
         </div>
 
-        <ul className="flex flex-wrap justify-center lg:justify-around w-full lg:gap-4 p-2 lg:p-4 text-sm underline underline-offset-2 decoration-primary-dark lg:no-underline text-slate-400">
+        <ul className="flex flex-wrap justify-center lg:justify-around w-full lg:gap-4 p-2 lg:p-4 text-sm underline underline-offset-2 lg:no-underline text-slate-400">
           <div className="text-center sm:flex lg:flex-col">
             <Link href="/">
               <li className="p-2 underline-hover cursor-pointer">
@@ -32,7 +32,7 @@ const Resume: NextPage = () => {
               </li>
             </Link>
             <a href="https://www.skgr.xyz/">
-              <li className="p-2  underline-hover">skgr.xyz</li>
+              <li className="p-2 underline-hover">skgr.xyz</li>
             </a>
           </div>
           <div className="text-center sm:flex lg:flex-col">
@@ -48,7 +48,7 @@ const Resume: NextPage = () => {
               rel="noopener noreferrer"
               href="https://github.com/sarthak22gaur"
             >
-              <li className="p-2  underline-hover">github</li>
+              <li className="p-2 underline-hover">github</li>
             </a>
           </div>
         </ul>
