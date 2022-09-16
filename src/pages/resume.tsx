@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
-import Link from "next/link";
-import SEO from "@/components/SEO";
-import { TbFileDownload } from "react-icons/tb";
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import SEO from '@/components/SEO';
+import { TbFileDownload } from 'react-icons/tb';
 
 export async function getStaticProps() {
   return {
@@ -73,16 +73,15 @@ const Resume: NextPage = () => {
                 <h1 className="pb-4 text-sm sm:text-base text-primary-dark underline underline-offset-8 font-bold">
                   Experiences
                 </h1>
-
                 <ExpCard
                   position="Developer"
                   heading="TollRing"
                   duration="July 2020 - July 2021"
                   description="Worked on Analytics 365 (an analytics app for Microsoft Teams)"
                   items={[
-                    "Building and integrating authentication and authorization in Microsoft Teams (Tabs and Bots) using OAuth2.0 and OpenIDConnect",
-                    "Building RESTful APIs for authentication and authorization",
-                    "Creating chatbot for Analytics 365",
+                    'Building and integrating authentication and authorization in Microsoft Teams (Tabs and Bots) using OAuth2.0 and OpenIDConnect',
+                    'Building RESTful APIs for authentication and authorization',
+                    'Creating chatbot for Analytics 365',
                   ]}
                 />
                 <ExpCard
@@ -91,32 +90,36 @@ const Resume: NextPage = () => {
                   description=""
                   duration="May - July 2019"
                   items={[
-                    "Porting of Delve (debugger for Go) from x86-64 architecture to Aarch-64 architecture for Windows on Arm devices",
-                    "Cross-compiling JDK-11 for Windows running on an Aarch-64 for Windows on ARM devices.",
+                    'Porting of Delve (debugger for Go) from x86-64 architecture to Aarch-64 architecture for Windows on Arm devices',
+                    'Cross-compiling JDK-11 for Windows running on an Aarch-64 for Windows on ARM devices.',
                   ]}
                 />
-
                 <h1 className="pb-4 text-sm sm:text-base text-primary-dark underline underline-offset-8 font-bold">
                   Projects
                 </h1>
-
                 <ProjectCard
                   title="Byte the Tech"
                   description="Personal blog"
-                  summary="Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+                  summary="A blog to document my journey towards becoming a developer and to help others learn exciting new stuff"
                   items={[
-                    "Next.js",
-                    "tRPC",
-                    "NextAuth",
-                    "TailwindCSS",
-                    "Contentful",
+                    'Next.js',
+                    'tRPC',
+                    'NextAuth',
+                    'TailwindCSS',
+                    'Contentful',
                   ]}
                 />
                 <ProjectCard
                   title="Weakest-Z"
                   description="A polling website"
-                  summary="Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
-                  items={["Next.js", "tRPC", "Planetscale"]}
+                  summary="Polling website made with the t3 stack to get familiar with tRPC. The data was scraped from MyAnimeList using a Go web scraper"
+                  items={['Next.js', 'tRPC', 'Planetscale', 'Go']}
+                />
+                <ProjectCard
+                  title="Portfolio Website"
+                  description=""
+                  summary="A statically generated portfolio website built with Next.js"
+                  items={['Next.js', 'TailwindCSS']}
                 />
               </div>
               <div className="w-1/3 sticky p-2 flex flex-col gap-2">
@@ -127,37 +130,37 @@ const Resume: NextPage = () => {
                   <SkillsCard
                     heading="Languages"
                     items={[
-                      "TypeScript/ Javascript",
-                      "C++",
-                      "HTML",
-                      "CSS/Saas",
-                      "Go",
-                      "SQL",
+                      'TypeScript/ Javascript',
+                      'C++',
+                      'HTML',
+                      'CSS/Saas',
+                      'Go',
+                      'SQL',
                     ]}
                   />
                   <SkillsCard
                     heading="Frameworks/ Libraries"
                     items={[
-                      "Node.js",
-                      "React",
-                      "Next.js",
-                      "NextAuth",
-                      "Prisma",
-                      "tRPC",
-                      "TailwindCSS",
+                      'Node.js',
+                      'React',
+                      'Next.js',
+                      'NextAuth',
+                      'Prisma',
+                      'tRPC',
+                      'TailwindCSS',
                     ]}
                   />
                   <SkillsCard
                     heading="Platforms/ Tools"
                     items={[
-                      "Git",
-                      "Docker",
-                      "Planescale",
-                      "Vercel",
-                      "Contentful",
+                      'Git',
+                      'Docker',
+                      'Planescale',
+                      'Vercel',
+                      'Contentful',
                     ]}
                   />
-                  <SkillsCard heading="Design" items={["Figma"]} />
+                  <SkillsCard heading="Design" items={['Figma']} />
                 </article>
 
                 <article>
@@ -211,7 +214,7 @@ const EdCard: React.FC<{
   return (
     <div className="text-xs sm:text-sm flex flex-col gap-2 pb-4">
       <h2 className="font-bold">
-        {props.heading} -{" "}
+        {props.heading} -{' '}
         <span className="font-light italic">{props.content}</span>
       </h2>
       <h3 className="text-gray-400">GPA: {props.gpa}</h3>
@@ -231,12 +234,12 @@ const ExpCard: React.FC<{
     <>
       <article className="flex flex-col gap-2 text-xs sm:text-sm pb-4">
         <h2 className="text-sm sm:text-base">
-          <span className="italic">{props.position}</span> @{" "}
+          <span className="italic">{props.position}</span> @{' '}
           <span className="font-bold">{props.heading}, </span>India
         </h2>
         <h4 className="text-gray-400">{props.duration}</h4>
         <p className="font-bold">
-          Project :{" "}
+          Project :{' '}
           <span className="font-normal text-gray-400">{props.description}</span>
         </p>
 
@@ -259,7 +262,7 @@ const ProjectCard: React.FC<{
     <>
       <article className="flex flex-col gap-2 text-xs sm:text-sm pb-4">
         <h2 className="text-sm sm:text-base">
-          <span className="font-bold">{props.title}</span> -{" "}
+          <span className="font-bold">{props.title}</span> -{' '}
           <span className="italic">{props.description}</span>
         </h2>
 
