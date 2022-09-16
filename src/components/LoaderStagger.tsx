@@ -2,8 +2,8 @@ import React, { useRef, useEffect } from 'react'
 
 const LoaderStagger: React.FC = () => {
   return (
-    <div className="w-full h-screen absolute flex flex-col items-center justify-center">
-      <div className="max-h-[650px] h-max max-w-[1200px] w-[90vw] p-4 overflow-hidden">
+    <div className="w-full h-screen absolute flex items-center justify-center">
+      <div className="max-h-[650px] h-max max-w-[1200px] w-full p-2 overflow-hidden">
         <svg
         className=''
           viewBox="0 0 7590 3750"
