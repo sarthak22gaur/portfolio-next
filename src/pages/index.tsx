@@ -7,6 +7,7 @@ import Tools from "@/components/sections/Tools";
 import Navbar from "../components/Navbar";
 import ParticleBg from "@/components/Particles";
 import Loader from "@/components/Loader";
+import LoaderStagger from "@/components/LoaderStagger";
 import SEO from "@/components/SEO";
 
 export async function getStaticProps() {
@@ -18,9 +19,14 @@ export async function getStaticProps() {
 const Home: NextPage = () => {
   
   const [useLoader, setUseLoader] = useState(true);
+  const [useStaggerLoader, setUseStaggerLoader] = useState(false);
 
   const callbackLoader = (flag: boolean) => {
     setUseLoader(flag);
+    setUseStaggerLoader(true);
+    setTimeout(() => {
+      setUseStaggerLoader(false);
+    }, 3500)
   };
 
   return (
@@ -29,7 +35,7 @@ const Home: NextPage = () => {
       <ParticleBg />
       {useLoader ? (
         <Loader useLoader={callbackLoader} />
-      ) : (
+      ) : (useStaggerLoader ? (<LoaderStagger />) : (
         <>
           <Navbar />
           <Hero />
@@ -37,7 +43,7 @@ const Home: NextPage = () => {
           <Projects />
           <Tools />
         </>
-      )}
+      ))}
     </>
   );
 };

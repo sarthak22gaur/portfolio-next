@@ -1,15 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 
-// TODO: add options for reduced motion and high contrast 
+// TODO: add options for reduced motion and high contrast
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      keyframes: {
+        stagger: { '100%': { transform: 'translateX(0)' } },
+      },
       colors: {
         'primary-dark': '#6C63ff',
         'primary-light': 'hsla(0, 0%, 35%, 0.39)',
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'),],
+  plugins: [require('@tailwindcss/typography')],
 };
