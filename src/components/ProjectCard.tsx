@@ -13,12 +13,12 @@ const ProjectCard: React.FC<{
   Repolink: string;
 }> = (props) => {
   return (
-    <div className="w-full h-full flex flex-col gap-4 p-4 shadow-md shadow-primary-dark/25 justify-center items-center lg:hover:scale-105 lg:hover:shadow-lg lg:hover:shadow-primary-dark lg:transition-all">
+    <div className="w-full h-full flex flex-col gap-4 p-4 group justify-center items-center lg:hover:scale-105 shadow lg:hover:shadow-2xl lg:transition-all">
       <a
         href={props.Livelink}
         target="_blank"
         rel="noopener noreferrer"
-        className="cursor-pointer underline-hover text-3xl px-4 py-2 text-primary-dark group-hover:text-primary-dark w-fit "
+        className="cursor-pointer underline-hover text-3xl px-4 py-2 text-white group-hover:text-primary-dark w-fit "
       >
         {props.Title}
       </a>
@@ -85,8 +85,8 @@ const ProjectCard: React.FC<{
           </div>
         </div>
       </section>
-      <div className="flex flex-col gap-2 justify-center items-center">
-        <div className="flex flex-col w-full gap-4 px-4 py-2 justify-center items-center md:bg-black rounded">
+      <div className="flex flex-col gap-2 justify-start items-center">
+        <div className="flex flex-col w-full gap-4 px-4 py-2 justify-center items-center  rounded">
           <p className="text-base w-full text-gray-300 text-center">
             {props.Description}
           </p>

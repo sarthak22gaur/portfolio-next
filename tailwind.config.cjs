@@ -5,9 +5,6 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      keyframes: {
-        stagger: { '100%': { transform: 'translateX(0)' } },
-      },
       colors: {
         'primary-dark': '#6C63ff',
         'primary-light': 'hsla(0, 0%, 35%, 0.39)',

@@ -1,6 +1,5 @@
 import Tilt from "react-parallax-tilt";
 import { FaNodeJs, FaGitAlt, FaFigma } from "react-icons/fa";
-import {} from "react-icons/cg";
 import { TbBrandNextjs } from "react-icons/tb";
 import {
   SiGithub,
@@ -13,7 +12,6 @@ import {
   SiTypescript,
   SiPostman,
 } from "react-icons/si";
-import {} from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 
 function TechCard({ icon, label }: { icon: React.ReactNode; label: string }) {
@@ -31,7 +29,7 @@ function TechCard({ icon, label }: { icon: React.ReactNode; label: string }) {
 
 function TechStack() {
   return (
-    <div className="flex flex-row flex-wrap w-full md:max-w-[75vw] justify-center items-center gap-0 mt-12 py-4">
+    <div className="flex flex-row flex-wrap w-full max-w-screen-xl justify-center items-center gap-0 mt-12 py-4">
       <TechCard icon={<FaNodeJs size="50" />} label="Nodejs" />
       <TechCard icon={<SiCplusplus size="50" />} label="C++" />
       <TechCard icon={<SiTypescript size="50" />} label="TypeScript" />

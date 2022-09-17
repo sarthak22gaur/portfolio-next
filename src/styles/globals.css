@@ -9,7 +9,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -23,5 +23,312 @@
 @layer components {
   .underline-hover {
     @apply lg:inline-block lg:relative lg:content-[""] lg:before:absolute lg:before:left-0 lg:before:bottom-0 lg:before:w-0 lg:before:h-[2px] lg:before:transition-[width] lg:before:ease-out  lg:before:bg-primary-dark lg:hover:before:w-full;
+  }
+
+  .stagger-onload {
+    @apply load-stagger;
+  }
+
+  .stagger-onhover {
+    @apply group-hover:hover-stagger ;
+  }
+}
+
+@layer utilities {
+  .load-stagger {
+    translate: calc((var(--offset) * 150) + 100px);
+  }
+
+  :not(.duplicate) > .hover-stagger {
+    animation: stagger 1s calc(var(--delay) * 50ms) forwards;
+  }
+  :not(.duplicate) > .load-stagger {
+    animation: stagger-2 1s calc(var(--delay) * 50ms) forwards;
+  }
+
+  .load-stagger:nth-child(33) {
+    --offset: 1px;
+    --delay: 1;
+  }
+  .load-stagger:nth-child(32) {
+    --offset: -2px;
+    --delay: 2;
+  }
+  .load-stagger:nth-child(31) {
+    --offset: 3px;
+    --delay: 3;
+  }
+  .load-stagger:nth-child(30) {
+    --offset: -4px;
+    --delay: 4;
+  }
+  .load-stagger:nth-child(29) {
+    --offset: 5px;
+    --delay: 5;
+  }
+  .load-stagger:nth-child(28) {
+    --offset: -6px;
+    --delay: 6;
+  }
+  .load-stagger:nth-child(27) {
+    --offset: 7px;
+    --delay: 7;
+  }
+  .load-stagger:nth-child(26) {
+    --offset: -8px;
+    --delay: 8;
+  }
+  .load-stagger:nth-child(25) {
+    --offset: 9px;
+    --delay: 9;
+  }
+  .load-stagger:nth-child(24) {
+    --offset: -10px;
+    --delay: 10;
+  }
+  .load-stagger:nth-child(23) {
+    --offset: 11px;
+    --delay: 11;
+  }
+  .load-stagger:nth-child(22) {
+    --offset: -12px;
+    --delay: 12;
+  }
+  .load-stagger:nth-child(21) {
+    --offset: 13px;
+    --delay: 13;
+  }
+  .load-stagger:nth-child(20) {
+    --offset: -4px;
+    --delay: 14;
+  }
+  .load-stagger:nth-child(19) {
+    --offset: 5px;
+    --delay: 15;
+  }
+  .load-stagger:nth-child(18) {
+    --offset: -16px;
+    --delay: 16;
+  }
+  .load-stagger:nth-child(17) {
+    --offset: 7px;
+    --delay: 17;
+  }
+  .load-stagger:nth-child(16) {
+    --offset: -2px;
+    --delay: 18;
+  }
+  .load-stagger:nth-child(15) {
+    --offset: 3px;
+    --delay: 19;
+  }
+  .load-stagger:nth-child(14) {
+    --offset: -10px;
+    --delay: 20;
+  }
+  .load-stagger:nth-child(13) {
+    --offset: 11px;
+    --delay: 21;
+  }
+  .load-stagger:nth-child(12) {
+    --offset: -12px;
+    --delay: 22;
+  }
+  .load-stagger:nth-child(11) {
+    --offset: 3px;
+    --delay: 23;
+  }
+  .load-stagger:nth-child(10) {
+    --offset: -4px;
+    --delay: 24;
+  }
+  .load-stagger:nth-child(9) {
+    --offset: 9px;
+    --delay: 25;
+  }
+  .load-stagger:nth-child(8) {
+    --offset: -5px;
+    --delay: 26;
+  }
+  .load-stagger:nth-child(7) {
+    --offset: 12px;
+    --delay: 27;
+  }
+  .load-stagger:nth-child(6) {
+    --offset: -8px;
+    --delay: 28;
+  }
+  .load-stagger:nth-child(5) {
+    --offset: 9px;
+    --delay: 29;
+  }
+  .load-stagger:nth-child(4) {
+    --offset: -10px;
+    --delay: 30;
+  }
+  .load-stagger:nth-child(3) {
+    --offset: 11px;
+    --delay: 31;
+  }
+  .load-stagger:nth-child(2) {
+    --offset: -2px;
+    --delay: 32;
+  }
+  .load-stagger:nth-child(1) {
+    --offset: 13px;
+    --delay: 33;
+  }
+
+  .hover-stagger:nth-child(33) {
+    --offset: 1px;
+    --delay: 1;
+  }
+  .hover-stagger:nth-child(32) {
+    --offset: -2px;
+    --delay: 2;
+  }
+  .hover-stagger:nth-child(31) {
+    --offset: 3px;
+    --delay: 3;
+  }
+  .hover-stagger:nth-child(30) {
+    --offset: -4px;
+    --delay: 4;
+  }
+  .hover-stagger:nth-child(29) {
+    --offset: 5px;
+    --delay: 5;
+  }
+  .hover-stagger:nth-child(28) {
+    --offset: -6px;
+    --delay: 6;
+  }
+  .hover-stagger:nth-child(27) {
+    --offset: 7px;
+    --delay: 7;
+  }
+  .hover-stagger:nth-child(26) {
+    --offset: -8px;
+    --delay: 8;
+  }
+  .hover-stagger:nth-child(25) {
+    --offset: 9px;
+    --delay: 9;
+  }
+  .hover-stagger:nth-child(24) {
+    --offset: -10px;
+    --delay: 10;
+  }
+  .hover-stagger:nth-child(23) {
+    --offset: 11px;
+    --delay: 11;
+  }
+  .hover-stagger:nth-child(22) {
+    --offset: -12px;
+    --delay: 12;
+  }
+  .hover-stagger:nth-child(21) {
+    --offset: 13px;
+    --delay: 13;
+  }
+  .hover-stagger:nth-child(20) {
+    --offset: -4px;
+    --delay: 14;
+  }
+  .hover-stagger:nth-child(19) {
+    --offset: 5px;
+    --delay: 15;
+  }
+  .hover-stagger:nth-child(18) {
+    --offset: -16px;
+    --delay: 16;
+  }
+  .hover-stagger:nth-child(17) {
+    --offset: 7px;
+    --delay: 17;
+  }
+  .hover-stagger:nth-child(16) {
+    --offset: -2px;
+    --delay: 18;
+  }
+  .hover-stagger:nth-child(15) {
+    --offset: 3px;
+    --delay: 19;
+  }
+  .hover-stagger:nth-child(14) {
+    --offset: -10px;
+    --delay: 20;
+  }
+  .hover-stagger:nth-child(13) {
+    --offset: 11px;
+    --delay: 21;
+  }
+  .hover-stagger:nth-child(12) {
+    --offset: -12px;
+    --delay: 22;
+  }
+  .hover-stagger:nth-child(11) {
+    --offset: 3px;
+    --delay: 23;
+  }
+  .hover-stagger:nth-child(10) {
+    --offset: -4px;
+    --delay: 24;
+  }
+  .hover-stagger:nth-child(9) {
+    --offset: 9px;
+    --delay: 25;
+  }
+  .hover-stagger:nth-child(8) {
+    --offset: -5px;
+    --delay: 26;
+  }
+  .hover-stagger:nth-child(7) {
+    --offset: 12px;
+    --delay: 27;
+  }
+  .hover-stagger:nth-child(6) {
+    --offset: -8px;
+    --delay: 28;
+  }
+  .hover-stagger:nth-child(5) {
+    --offset: 9px;
+    --delay: 29;
+  }
+  .hover-stagger:nth-child(4) {
+    --offset: -10px;
+    --delay: 30;
+  }
+  .hover-stagger:nth-child(3) {
+    --offset: 11px;
+    --delay: 31;
+  }
+  .hover-stagger:nth-child(2) {
+    --offset: -2px;
+    --delay: 32;
+  }
+  .hover-stagger:nth-child(1) {
+    --offset: 13px;
+    --delay: 33;
+  }
+
+  @keyframes stagger {
+    0% {
+      translate: 0;
+    }
+
+    50% {
+      translate: calc((var(--offset) * 150) + 100px);
+    }
+
+    100% {
+      translate: 0;
+    }
+  }
+
+  @keyframes stagger-2 {
+    100% {
+      translate: 0;
+    }
   }
 }
