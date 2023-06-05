@@ -12,7 +12,7 @@ function Navbar() {
         <div className="flex justify-between w-full sm:w-3/4 items-center ">
           <Link className="underline-hover" href="/">
             <span className="cursor-pointer z-20 text-primary-dark text-3xl font-bold">
-              Sg.
+              SG.
             </span>
           </Link>
           <nav className="hidden sm:flex w-fit justify-end">
@@ -59,9 +59,9 @@ function MobileMenu() {
 function NavbarLinks() {
   return (
     <ul className="flex flex-col sm:flex-row items-center w-full mb-4 sm:mb-0 sm:px-4 gap-4 active:text-primary-dark">
-      <NavBarItem icon={<BsFillPersonFill size="16" />} label="me" />
-      <NavBarItem icon={<AiFillProject size="16" />} label="work" />
-      <NavbarCTA label="Resume" pagelink="/resume" />
+      <NavBarItem icon={<BsFillPersonFill size="16" />} label="Me" />
+      <NavBarItem icon={<AiFillProject size="16" />} label="Work" />
+      <NavbarCTA label="Resume" pagelink="https://docs.google.com/document/d/e/2PACX-1vSB97wRafLgsGNijAegny-cgSVXdoL6vRLvICsEUdUek-cikznLaIJ4VhFb5ke8BlRmOdiP3XAmzN5h/pub" />
     </ul>
   );
 }
