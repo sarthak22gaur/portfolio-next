@@ -8,7 +8,7 @@ const About: React.FC = () => {
       className="flex flex-col w-full items-center p-2 sm:p-8 min-h-screen"
     >
       <h1 className="text-3xl lg:text-4xl font-light pb-12 w-full text-center text-slate-400">
-        A few things about me 😃
+        A few things about me
       </h1>
       <section className="flex flex-col md:grid md:grid-cols-2 w-full md:flex-row sm:px-8 p-4 gap-4 h-fit justify-evenly md:justify-between items-center max-w-screen-xl">
         <div className="md:col-span-1 w-full h-fit">
