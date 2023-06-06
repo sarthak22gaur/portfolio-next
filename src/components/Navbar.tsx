@@ -61,7 +61,7 @@ function NavbarLinks() {
     <ul className="flex flex-col sm:flex-row items-center w-full mb-4 sm:mb-0 sm:px-4 gap-4 active:text-primary-dark">
       <NavBarItem icon={<BsFillPersonFill size="16" />} label="Me" />
       <NavBarItem icon={<AiFillProject size="16" />} label="Work" />
-      <NavbarCTA label="Resume" pagelink="https://docs.google.com/document/d/e/2PACX-1vSB97wRafLgsGNijAegny-cgSVXdoL6vRLvICsEUdUek-cikznLaIJ4VhFb5ke8BlRmOdiP3XAmzN5h/pub" />
+      <NavbarCTA label="Resume" pagelink="/resume" />
     </ul>
   );
 }
