@@ -8,14 +8,14 @@ import Link from "next/link";
 function Navbar() {
   return (
     <>
-      <div className="fixed flex z-30 items-center justify-center backdrop-blur-3xl p-2 w-full">
-        <div className="flex justify-between w-full sm:w-3/4 items-center ">
+      <div className="fixed z-30 flex w-full items-center justify-center p-2 backdrop-blur-3xl">
+        <div className="flex w-full items-center justify-between sm:w-3/4 ">
           <Link className="underline-hover" href="/">
-            <span className="cursor-pointer z-20 text-primary-dark text-3xl font-bold">
+            <span className="z-20 cursor-pointer text-3xl font-bold text-primary-dark">
               SG.
             </span>
           </Link>
-          <nav className="hidden sm:flex w-fit justify-end">
+          <nav className="hidden w-fit justify-end sm:flex">
             <NavbarLinks />
           </nav>
         </div>
@@ -42,9 +42,9 @@ function MobileMenu() {
   );
   return (
     <>
-      <nav className="h-fit backdrop-blur-3xl z-10 fixed top-0 sm:hidden items-center w-full">
+      <nav className="fixed top-0 z-10 h-fit w-full items-center backdrop-blur-3xl sm:hidden">
         {isOpen ? (
-          <div className="bg-black backdrop-opacity-50 pb-2">
+          <div className="bg-black pb-2 backdrop-opacity-50">
             {closeMenu}
             <NavbarLinks />
           </div>
@@ -58,7 +58,7 @@ function MobileMenu() {
 
 function NavbarLinks() {
   return (
-    <ul className="flex flex-col sm:flex-row items-center w-full mb-4 sm:mb-0 sm:px-4 gap-4 active:text-primary-dark">
+    <ul className="mb-4 flex w-full flex-col items-center gap-4 active:text-primary-dark sm:mb-0 sm:flex-row sm:px-4">
       <NavBarItem icon={<BsFillPersonFill size="16" />} label="Me" />
       <NavBarItem icon={<AiFillProject size="16" />} label="Work" />
       <NavbarCTA label="Resume" pagelink="/resume" />
@@ -69,7 +69,7 @@ function NavbarLinks() {
 function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <Link href={"#" + label}>
-      <li className="underline-hover flex flex-row text-base justify-center cursor-pointer items-center gap-2 mx-2 p-2  text-white hover:text-primary-dark transition-all">
+      <li className="underline-hover mx-2 flex cursor-pointer flex-row items-center justify-center gap-2 p-2 text-base  text-white transition-all hover:text-primary-dark">
         <i>{icon}</i>
         <span>{label}</span>
       </li>
@@ -80,7 +80,7 @@ function NavBarItem({ icon, label }: { icon: React.ReactNode; label: string }) {
 function NavbarCTA({ label, pagelink }: { label: string; pagelink: string }) {
   return (
     <Link href={pagelink}>
-      <li className="flex flex-row justify-center items-center cursor-pointer text-sm gap-2 m-2 px-4 py-2 border-primary-dark border-2 rounded-sm  text-primary-dark hover:text-black hover:bg-primary-dark transition-all">
+      <li className="m-2 flex cursor-pointer flex-row items-center justify-center gap-2 rounded-sm border-2 border-primary-dark px-4 py-2 text-sm  text-primary-dark transition-all hover:bg-primary-dark hover:text-black">
         {label}
       </li>
     </Link>
@@ -89,7 +89,7 @@ function NavbarCTA({ label, pagelink }: { label: string; pagelink: string }) {
 
 function NavBarMenuIcon({ icon }: { icon: React.ReactNode }) {
   return (
-    <button className="text-white float-right p-4 sm:hidden">{icon}</button>
+    <button className="float-right p-4 text-white sm:hidden">{icon}</button>
   );
 }
 export default Navbar;

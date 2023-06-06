@@ -1,6 +1,6 @@
-import { FaExternalLinkAlt } from 'react-icons/fa';
-import { SiGithub } from 'react-icons/si';
-import Image from 'next/image';
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { SiGithub } from "react-icons/si";
+import Image from "next/image";
 const ProjectCard: React.FC<{
   Title: string;
   Description: string;
@@ -13,19 +13,19 @@ const ProjectCard: React.FC<{
   Repolink: string;
 }> = (props) => {
   return (
-    <div className="w-full h-full flex flex-col gap-4 p-4 group justify-center items-center lg:hover:scale-105 shadow lg:hover:shadow-2xl lg:transition-all">
+    <div className="group flex h-full w-full flex-col items-center justify-center gap-4 p-4 shadow lg:transition-all lg:hover:scale-105 lg:hover:shadow-2xl">
       <a
         href={props.Livelink}
         target="_blank"
         rel="noopener noreferrer"
-        className="cursor-pointer underline-hover text-3xl px-4 py-2 text-white group-hover:text-primary-dark w-fit "
+        className="underline-hover w-fit cursor-pointer px-4 py-2 text-3xl text-white group-hover:text-primary-dark "
       >
         {props.Title}
       </a>
-      <section className="w-full h-full grid items-center justify-center grid-cols-4 grid-rows-6">
-        <div className="col-start-1 col-span-4 row-start-1 row-span-6 w-full h-full">
+      <section className="grid h-full w-full grid-cols-4 grid-rows-6 items-center justify-center">
+        <div className="col-span-4 col-start-1 row-span-6 row-start-1 h-full w-full">
           <div className="flex flex-col items-center justify-end">
-            <div className="w-full h-full bg-gray-400 p-1">
+            <div className="h-full w-full bg-gray-400 p-1">
               <div className="w-full ">
                 <Image
                   layout="responsive"
@@ -37,16 +37,16 @@ const ProjectCard: React.FC<{
                 />
               </div>
             </div>
-            <div className="w-8 h-1 bg-gray-400"></div>
-            <div className="w-28 h-2 bg-gray-400"></div>
+            <div className="h-1 w-8 bg-gray-400"></div>
+            <div className="h-2 w-28 bg-gray-400"></div>
           </div>
         </div>
-        <div className="w-full h-full col-start-3 col-span-2 row-start-2 row-span-5 z-10">
-          <div className="rounded flex justify-end">
-            <div className="w-3/4 h-full flex flex-col items-center rounded justify-center">
-              <div className="w-full h-full border-[1px] rounded flex flex-col gap-1 items-center justify-center p-1 bg-black">
-                <div className="w-full h-full flex flex-col items-center rounded-sm">
-                  <div className="w-full h-full rounded-sm">
+        <div className="z-10 col-span-2 col-start-3 row-span-5 row-start-2 h-full w-full">
+          <div className="flex justify-end rounded">
+            <div className="flex h-full w-3/4 flex-col items-center justify-center rounded">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-1 rounded border-[1px] bg-black p-1">
+                <div className="flex h-full w-full flex-col items-center rounded-sm">
+                  <div className="h-full w-full rounded-sm">
                     <Image
                       layout="responsive"
                       className="rounded-sm object-fill"
@@ -57,20 +57,20 @@ const ProjectCard: React.FC<{
                     />
                   </div>
                 </div>
-                <div className="h-2 w-2 border-[1px] rounded-full bg-gray-500"></div>
+                <div className="h-2 w-2 rounded-full border-[1px] bg-gray-500"></div>
               </div>
             </div>
           </div>
         </div>
-        <div className="w-full h-full col-start-4 col-span-1 row-start-4 row-span-3 z-20">
+        <div className="z-20 col-span-1 col-start-4 row-span-3 row-start-4 h-full w-full">
           <div className="flex justify-end">
-            <div className="w-1/2 h-full border-[1px] flex flex-col items-center justify-center rounded p-[2px] bg-black">
-              <div className="w-full h-full rounded-md flex-col justify-between">
-                <div className="w-full flex justify-center gap-1 p-[2px] bg-black">
-                  <div className="w-1 h-[2px] rounded-full bg-gray-400"></div>
-                  <div className="w-4 h-[2px] rounded-xl bg-gray-400"></div>
+            <div className="flex h-full w-1/2 flex-col items-center justify-center rounded border-[1px] bg-black p-[2px]">
+              <div className="h-full w-full flex-col justify-between rounded-md">
+                <div className="flex w-full justify-center gap-1 bg-black p-[2px]">
+                  <div className="h-[2px] w-1 rounded-full bg-gray-400"></div>
+                  <div className="h-[2px] w-4 rounded-xl bg-gray-400"></div>
                 </div>
-                <div className="w-full h-full">
+                <div className="h-full w-full">
                   <Image
                     layout="responsive"
                     className="rounded-sm object-fill"
@@ -85,12 +85,12 @@ const ProjectCard: React.FC<{
           </div>
         </div>
       </section>
-      <div className="flex flex-col gap-2 justify-start items-center">
-        <div className="flex flex-col w-full gap-4 px-4 py-2 justify-center items-center  rounded">
-          <p className="text-base w-full text-gray-300 text-center">
+      <div className="flex flex-col items-center justify-start gap-2">
+        <div className="flex w-full flex-col items-center justify-center gap-4 rounded px-4  py-2">
+          <p className="w-full text-center text-base text-gray-300">
             {props.Description}
           </p>
-          <ul className="flex justify-center flex-wrap gap-2 text-gray-200">
+          <ul className="flex flex-wrap justify-center gap-2 text-gray-200">
             {props.Tech.map((curr, index) => {
               return <ProjectStackItem label={curr} key={index} />;
             })}
@@ -114,9 +114,7 @@ const ProjectCard: React.FC<{
 
 function ProjectStackItem({ label }: { label: string }) {
   return (
-    <li className="text-center md:text-right text-gray-500 text-sm">
-      {label}
-    </li>
+    <li className="text-center text-sm text-gray-500 md:text-right">{label}</li>
   );
 }
 
@@ -129,7 +127,7 @@ function ProjectCTAItem({
 }) {
   return (
     <a target="_blank" rel="noopener noreferrer" href={externalLink}>
-      <li className="flex gap-2 cursor-pointer text-white  bg-black p-2 rounded hover:bg-black hover:text-primary-dark hover:-translate-y-1 transition-all">
+      <li className="flex cursor-pointer gap-2 rounded  bg-black p-2 text-white transition-all hover:-translate-y-1 hover:bg-black hover:text-primary-dark">
         {icon}
       </li>
     </a>

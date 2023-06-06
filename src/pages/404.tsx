@@ -14,16 +14,16 @@ const ErrorPage = () => {
   }, [router]);
   return (
     <>
-      <div className="flex flex-col p-8 gap-8 items-center justify-center h-screen text-center text-gray-400">
-        <p className="text-9xl sm:text-[20em] text-[#ffffff07] absolute z-0">
+      <div className="flex h-screen flex-col items-center justify-center gap-8 p-8 text-center text-gray-400">
+        <p className="absolute z-0 text-9xl text-[#ffffff07] sm:text-[20em]">
           404
         </p>
-        <p className="text-xl flex items-center justify-center">
+        <p className="flex items-center justify-center text-xl">
           You will be automatically redirected in{" "}
           <Countdown
             date={Date.now() + 3000}
             renderer={(props) => (
-              <span className="font-bold text-3xl text-primary-dark px-2">
+              <span className="px-2 text-3xl font-bold text-primary-dark">
                 {props.seconds}
               </span>
             )}
@@ -31,7 +31,7 @@ const ErrorPage = () => {
           seconds
         </p>
         <a
-          className="cursor-pointer z-10 px-6 py-2 text-lg rounded bg-gray-300 text-black lg:hover:text-primary-dark lg:hover:bg-black lg:transition-colors"
+          className="z-10 cursor-pointer rounded bg-gray-300 px-6 py-2 text-lg text-black lg:transition-colors lg:hover:bg-black lg:hover:text-primary-dark"
           onClick={handleClick}
         >
           Return to home

@@ -16,11 +16,15 @@ import { GrMysql } from "react-icons/gr";
 
 function TechCard({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <div className="w-fit md:w-40 m-4 shadow-xl">
+    <div className="m-4 w-fit shadow-xl md:w-40">
       <Tilt>
-        <div className="bg-black text-white rounded-xl flex flex-col p-4 lg:p-8 w-full text-2xl jusify-center items-center hover:text-primary-dark group transition-colors">
-          <i className="md:translate-y-6 group-hover:translate-y-0 transition-all">{icon}</i>
-          <span className="mt-4 hidden md:scale-0 group-hover:scale-100 md:block transition-all">{label}</span>
+        <div className="jusify-center group flex w-full flex-col items-center rounded-xl bg-black p-4 text-2xl text-white transition-colors hover:text-primary-dark lg:p-8">
+          <i className="transition-all group-hover:translate-y-0 md:translate-y-6">
+            {icon}
+          </i>
+          <span className="mt-4 hidden transition-all group-hover:scale-100 md:block md:scale-0">
+            {label}
+          </span>
         </div>
       </Tilt>
     </div>
@@ -29,7 +33,7 @@ function TechCard({ icon, label }: { icon: React.ReactNode; label: string }) {
 
 function TechStack() {
   return (
-    <div className="flex flex-row flex-wrap w-full max-w-screen-xl justify-center items-center gap-0 mt-12 py-4">
+    <div className="mt-12 flex w-full max-w-screen-xl flex-row flex-wrap items-center justify-center gap-0 py-4">
       <TechCard icon={<FaNodeJs size="50" />} label="Nodejs" />
       <TechCard icon={<SiCplusplus size="50" />} label="C++" />
       <TechCard icon={<SiTypescript size="50" />} label="TypeScript" />

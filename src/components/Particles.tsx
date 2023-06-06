@@ -51,16 +51,16 @@ const ParticleBg = () => {
           color: {
             value: "#ffffff",
           },
-            // links: {
-            //   color: "#ffffff",
-            //   distance: 150,
-            //   enable: true,
-            //   opacity: 0.5,
-            //   width: 1,
-            // },
-            // collisions: {
-            //   enable: true,
-            // },
+          // links: {
+          //   color: "#ffffff",
+          //   distance: 150,
+          //   enable: true,
+          //   opacity: 0.5,
+          //   width: 1,
+          // },
+          // collisions: {
+          //   enable: true,
+          // },
           move: {
             direction: "none",
             enable: true,

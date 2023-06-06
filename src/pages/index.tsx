@@ -1,13 +1,13 @@
-import type { NextPage } from 'next';
-import { useState } from 'react';
-import Hero from '@/components/sections/Hero';
-import About from '@/components/sections/About';
-import Projects from '@/components/sections/Projects';
-import Tools from '@/components/sections/Tools';
-import Navbar from '../components/Navbar';
-import ParticleBg from '@/components/Particles';
-import Loader from '@/components/Loader';
-import SEO from '@/components/SEO';
+import type { NextPage } from "next";
+import { useState } from "react";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Projects from "@/components/sections/Projects";
+import Tools from "@/components/sections/Tools";
+import Navbar from "../components/Navbar";
+import ParticleBg from "@/components/Particles";
+import Loader from "@/components/Loader";
+import SEO from "@/components/SEO";
 
 export async function getStaticProps() {
   return {

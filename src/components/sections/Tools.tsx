@@ -4,9 +4,9 @@ const Tools: React.FC = () => {
   return (
     <section
       id="tools"
-      className="flex flex-col w-full items-center p-2 sm:p-8 min-h-screen"
+      className="flex min-h-screen w-full flex-col items-center p-2 sm:p-8"
     >
-      <h1 className="text-3xl lg:text-4xl text-slate-400 font-light pt-12 w-full text-center max-w-screen-xl">
+      <h1 className="w-full max-w-screen-xl pt-12 text-center text-3xl font-light text-slate-400 lg:text-4xl">
         Tools I Use 🧰
       </h1>
       <TechStack />

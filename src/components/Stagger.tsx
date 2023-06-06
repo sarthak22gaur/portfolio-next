@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 export const Stagger: React.FC = () => {
   const [useHoverStagger, setUseHoverStagger] = useState(false);
@@ -10,7 +10,7 @@ export const Stagger: React.FC = () => {
   }, []);
 
   return (
-    <div className="max-h-[650px] group h-max max-w-[1200px] w-full p-2 overflow-hidden">
+    <div className="group h-max max-h-[650px] w-full max-w-[1200px] overflow-hidden p-2">
       <svg
         className=""
         viewBox="0 0 7590 3750"
@@ -19,7 +19,7 @@ export const Stagger: React.FC = () => {
       >
         <g className="" id="S-Stagger">
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-33"
           >
             <rect
@@ -118,7 +118,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-32"
           >
             <rect
@@ -218,7 +218,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-31"
           >
             <rect
@@ -334,7 +334,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-30"
           >
             <rect
@@ -434,7 +434,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-29"
           >
             <rect
@@ -530,7 +530,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-28"
           >
             <rect
@@ -624,7 +624,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-27"
           >
             <rect
@@ -736,7 +736,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-26"
           >
             <rect
@@ -827,7 +827,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-25"
           >
             <rect
@@ -916,7 +916,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-24"
           >
             <rect
@@ -1019,7 +1019,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-23"
           >
             <rect
@@ -1144,7 +1144,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-22"
           >
             <rect
@@ -1235,7 +1235,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-21"
           >
             <rect
@@ -1336,7 +1336,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-20"
           >
             <rect
@@ -1430,7 +1430,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-19"
           >
             <rect
@@ -1533,7 +1533,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-18"
           >
             <rect
@@ -1628,7 +1628,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-17"
           >
             <rect
@@ -1725,7 +1725,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-16"
           >
             <rect
@@ -1819,7 +1819,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-15"
           >
             <rect
@@ -1904,7 +1904,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-14"
           >
             <rect
@@ -2020,7 +2020,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-13"
           >
             <rect
@@ -2110,7 +2110,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-12"
           >
             <rect
@@ -2231,7 +2231,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-11"
           >
             <rect
@@ -2327,7 +2327,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-10"
           >
             <rect
@@ -2447,7 +2447,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-9"
           >
             <rect
@@ -2558,7 +2558,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-8"
           >
             <rect
@@ -2690,7 +2690,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-7"
           >
             <rect
@@ -2792,7 +2792,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-6"
           >
             <rect
@@ -2914,7 +2914,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-5"
           >
             <rect
@@ -3019,7 +3019,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-4"
           >
             <rect
@@ -3136,7 +3136,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-3"
           >
             <rect
@@ -3223,7 +3223,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-2"
           >
             <rect
@@ -3291,7 +3291,7 @@ export const Stagger: React.FC = () => {
             />
           </g>
           <g
-            className={useHoverStagger ? 'stagger-onhover' : 'stagger-onload'}
+            className={useHoverStagger ? "stagger-onhover" : "stagger-onload"}
             id="row-1"
           >
             <rect
