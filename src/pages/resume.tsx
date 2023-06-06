@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import SEO from "@/components/SEO";
 import { TbFileDownload } from "react-icons/tb";
-import { AiOutlineHome } from "react-icons/ai";
+import { AiFillHome } from "react-icons/ai";
 
 const Resume: NextPage = () => {
   return (
@@ -12,7 +12,7 @@ const Resume: NextPage = () => {
         <div className="flex w-full items-center justify-around">
           <Link href="/">
             <div className="flex cursor-pointer items-center justify-center gap-2 text-lg text-gray-700 transition-colors hover:text-black">
-              <AiOutlineHome size={20} />
+              <AiFillHome size={20} />
               Home
             </div>
           </Link>

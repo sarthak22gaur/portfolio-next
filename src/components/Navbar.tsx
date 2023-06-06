@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { AiFillProject } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 
 import Link from "next/link";
@@ -60,7 +59,6 @@ function NavbarLinks() {
   return (
     <ul className="mb-4 flex w-full flex-col items-center gap-4 active:text-primary-dark sm:mb-0 sm:flex-row sm:px-4">
       <NavBarItem icon={<BsFillPersonFill size="16" />} label="Me" />
-      <NavBarItem icon={<AiFillProject size="16" />} label="Work" />
       <NavbarCTA label="Resume" pagelink="/resume" />
     </ul>
   );
